@@ -1,0 +1,1 @@
+Use this directory to hold .css files which will provide the styling for the pages. 

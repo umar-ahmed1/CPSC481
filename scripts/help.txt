@@ -1,0 +1,1 @@
+Use this directory for any .js files we make to create a dynamic web page
