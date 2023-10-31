@@ -4,31 +4,41 @@
 <head>
     <link rel="stylesheet" href="../assets/css/map page.css">
 </head>
-
+<!-- TODO: Add a show all and clear all button (without implementation) -->
 <body>
     <img class="map" src="../assets/images/map.png" />
     <div class="flex-container">
         <div class="scrollbar">
             <img class="scrollbartopimage" src="../assets/images/mapscrollbartop.png" />
             <div class="scrollbartoptext">STAMPEDE<br />MAP</div>
-            <div style="position:relative; top:200px; background-color:yellow;">
+            <div style="position:relative; top:180px;">
                 <ul id="mapUL">
-                    <li><span class="caret">Beverages</span>
+                    <li><span class="category">Concets</span>
                         <ul class="nested">
-                            <li>Water</li>
-                            <li>Coffee</li>
-                            <li><span class="caret">Tea</span>
+                            <li><span class="unchecked">Coke Stage</span></li>
+                            <li><span class="unchecked">Cowboys</span></li>
+                            <li><span class="unchecked">Nashville North</span></li>
+
+                        </ul>
+                    </li>
+                    <li><span class="category">Rides</span>
+                        <ul class="nested">
+                            <li><span class="unchecked">Crazy Mouse</span></li>
+                            <li><span class="unchecked">Outlaw</span></li>
+                        </ul>
+                    </li>
+                    <li><span class="category">Food & Drink</span>
+                        <ul class="nested">
+                            <li><span class="category">Western</span>
                                 <ul class="nested">
-                                    <li>Black Tea</li>
-                                    <li>White Tea</li>
-                                    <li><span class="caret">Green Tea</span>
-                                        <ul class="nested">
-                                            <li>Sencha</li>
-                                            <li>Gyokuro</li>
-                                            <li>Matcha</li>
-                                            <li>Pi Lo Chun</li>
-                                        </ul>
-                                    </li>
+                                    <li><span class="unchecked">Ben's BBQ</span></li>
+                                    <li><span class="unchecked">Richard's Ribs</span></li>
+                                </ul>
+                            </li>
+                            <li><span class="category">Snacks</span>
+                                <ul class="nested">
+                                    <li><span class="unchecked">Dave's Donuts</span></li>
+                                    <li><span class="unchecked">Cathy's Cotton Candy</span></li>
                                 </ul>
                             </li>
                         </ul>

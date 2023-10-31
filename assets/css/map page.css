@@ -41,31 +41,31 @@
     height: 100%;
 }
 
-ul,
-#mapUL {
+ul {
     list-style-type: none;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 #mapUL {
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    font-size: 35px;
 }
 
-.caret {
+.category {
     cursor: pointer;
     user-select: none;
-    /* Prevent text selection */
 }
 
-.caret::before {
+.category::before {
     content: "\25B6";
     color: red;
     display: inline-block;
     margin-right: 6px;
 }
 
-.caret-down::before {
+.category-down::before {
     transform: rotate(90deg);
 }
 
@@ -75,4 +75,20 @@ ul,
 
 .active {
     display: block;
+}
+
+.unchecked {
+    cursor: pointer;
+    user-select: none;
+}
+
+.unchecked::before {
+    content: "\2610";
+    color: red;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.checked::before {
+    content: "\2611";
 }
