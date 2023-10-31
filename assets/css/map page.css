@@ -1,0 +1,143 @@
+.map-page {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .map-page .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  .map-page .map {
+    position: absolute;
+    width: 1018px;
+    height: 1024px;
+    top: 0;
+    left: 422px;
+    object-fit: cover;
+  }
+  
+  .map-page .overlap-group {
+    position: absolute;
+    width: 422px;
+    height: 150px;
+    top: 0;
+    left: 0;
+  }
+  
+  .map-page .stampedemap {
+    position: absolute;
+    width: 390px;
+    height: 141px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .map-page .STAMPEDE-MAP {
+    position: absolute;
+    width: 265px;
+    top: 23px;
+    left: 135px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .map-page .polygon {
+    position: absolute;
+    width: 38px;
+    height: 28px;
+    top: 164px;
+    left: 9px;
+  }
+  
+  .map-page .img {
+    position: absolute;
+    width: 28px;
+    height: 38px;
+    top: 208px;
+    left: 16px;
+  }
+  
+  .map-page .text-wrapper {
+    position: absolute;
+    width: 306px;
+    top: 152px;
+    left: 66px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .map-page .text-wrapper-2 {
+    position: absolute;
+    width: 213px;
+    top: 692px;
+    left: 88px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .timeslot-scroll {
+    overflow-y: scroll;
+    width: 410px;
+    height: 30%;
+}
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
