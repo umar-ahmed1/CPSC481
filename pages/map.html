@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../assets/css/map.css">
+    </head>
+    <!-- TODO: Add a show all and clear all button (without implementation) -->
+    <body>
+        <div class="sidebar">
+            <div class="red-gradient">
+                <div class="scrollbartoptext">STAMPEDE<br/>MAP</div>
+            </div>
+            <div class="scrollbar">
+                <div>
+                    <ul id="mapUL">
+                        <li><span class="category">Concerts</span>
+                            <ul class="nested">
+                                <li><span class="unchecked">Coke Stage</span></li>
+                                <li><span class="unchecked">Cowboys</span></li>
+                                <li><span class="unchecked">Nashville North</span></li>
+    
+                            </ul>
+                        </li>
+                        <li><span class="category">Rides</span>
+                            <ul class="nested">
+                                <li><span class="unchecked">Crazy Mouse</span></li>
+                                <li><span class="unchecked">Outlaw</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="category">Food & Drink</span>
+                            <ul class="nested">
+                                <li><span class="category">Featured</span>
+                                    <ul class="nested">
+                                        <li><span class="unchecked">Ben's BBQ</span></li>
+                                        <li><span class="unchecked">Richard's Ribs</span></li>
+                                        <li><span class="unchecked">Lemonade Stand</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="category">Local</span>
+                                    <ul class="nested">
+                                        <li><span class="unchecked">Ben's BBQ</span></li>
+                                        <li><span class="unchecked">Richard's Ribs</span></li>
+                                        <li><span class="unchecked">DogFather</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="category">Snacks</span>
+                                    <ul class="nested">
+                                        <li><span class="unchecked">Dave's Donuts</span></li>
+                                        <li><span class="unchecked">Cathy's Cotton Candy</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="category">Drinks</span>
+                                    <ul class="nested">
+                                        <li><span class="unchecked">Lenomade Stand</span></li>
+                                        <li><span class="unchecked">Slushie Stand</span></li>
+                                        <li><span class="unchecked">Beer Gardens</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <script src="../assets/js/map page.js"></script>
+                </div>
+            </div>
+        </div>
+        <div class="map-div" id="mapContainer">
+            <div class="button-div">
+                <div>ZOOM</div>
+                <button class="zoom" id="zoom-in" onclick="zoom(100)">+</button>
+                <button class="zoom" id="zoom-out" onclick="zoom(-100)">-</button>
+            </div>
+
+            <img id="map" src="../assets/images/map.png" />
+        </div>
+    </body>
+
+</html>
+
+<!--
+
+    
+-->

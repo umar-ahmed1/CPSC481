@@ -14,3 +14,18 @@ for (i = 0; i < toggler.length; i++) {
     this.classList.toggle("checked")
   });
 }
+
+
+function zoom(zoom) {
+  let map = document.getElementById("map");
+  let mapDiv = document.getElementById("mapContainer");
+  let mapContainer = mapDiv.getBoundingClientRect();
+
+  // Do not zoom out any more if the map dimensions are smaller than the maps container - 
+  // disallows white space on the page
+  if (((map.width + zoom) > mapContainer.width) && ((map.height + zoom) > mapContainer.height)){
+    map.width += zoom;
+    map.height += zoom;
+  }
+}
+
