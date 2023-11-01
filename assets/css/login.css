@@ -92,15 +92,32 @@ body {
 }
 
 .forgot {
+    display: block;
+    border: none;
+    background-color: #FFF6EA;
     font-size: 13px;
     font-weight: bold;
     margin-left: 185px;
     text-decoration: underline;
 }
 
+.inner-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.cancel-btn input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+}
 .submit-btn input[type="submit"] {
-    width: 250px;
-    height: 55px;
+    width: 200px;
+    height: 50px;
     background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
     font-size: 25px;
     font-weight: bold;
