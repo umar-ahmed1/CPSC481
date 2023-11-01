@@ -1,7 +1,14 @@
+body,html {
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    background: #FFF6EA;
+}
+
 .flex-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 1440px;
     height: 1024px;
 }
@@ -13,6 +20,23 @@
     top: 0;
     left: 422px;
     object-fit: cover;
+}
+
+.marker {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.markerinfo {
+    position: absolute;
+    top: 0px;
+    left: 800px;
+    width: 200px;
+    height: 800px;
+    color: black;
+    background: black;
+    z-index: 2;
 }
 
 .scrollbartopimage {
@@ -39,6 +63,8 @@
     overflow-y: scroll;
     width: 410px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 ul {
