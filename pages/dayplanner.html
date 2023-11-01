@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/dayplanner.css">
+        <script src="../scripts/add.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="../assets/images/landingheader.png" alt="header img">
+                <div class="title">DAY PLANNER</div>
+            </div>
+            <div class="page"><span class="lt">&lt;</span>&nbsp;&nbsp;Page 1&nbsp;&nbsp;<span class="gt">&gt;</span></div>
+
+            <div class="main">
+                <div id="add-menu">
+                    <button onclick="closeAddMenu()" class="close-btn">Back</button>
+                    <div class="add-menu-title">Add Item:</div>
+                    <div class="date">Date: July 9th</div>
+                    <button class="go">Go</button>
+                </div>
+                <div class="side">
+                    <button onclick="addMenu()" class="add-btn">Add Event</button>
+                    <div class="filter">
+                        <span class="f">Filter:</span>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="queue" class="hidden-checkbox">
+                                <label for="queue" style="color: #FF5757;">Queue</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="concerts" class="hidden-checkbox">
+                                <label for="concerts" style="color: 5CE1E6;">Concerts</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="rodeos" class="hidden-checkbox">
+                                <label for="rodeos" style="color: CB6CE3;">Rodeos</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="planner">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Mon<br>July 09</th>
+                                <th>Tue<br>July 10</th>
+                                <th>Wed<br>July 11</th>
+                                <th>Thurs<br>July 12</th>
+                                <th>Fri<br>July 13</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10 am</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>11 am</td>
+                                <td class="rodeo" rowspan="2">Bull Riding</td>
+                                <td></td>
+                                <td class="queue" >Orbiter</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12 pm</td>
+                                <td></td>
+                                <td></td>
+                                <td class="concert" >Charley <br> Crockett</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 pm</td>
+                                <td></td>
+                                <td></td>
+                                <td class="queue" >Zipper</td>
+                                <td></td>
+                                <td class="rodeo" rowspan="2">Barrell <br> Racing</td>
+                            </tr>
+                            <tr>
+                                <td>2 pm</td>
+                                <td></td>
+                                <td class="concert" rowspan="2">Vance Joy</td>
+                                <td></td>
+                                <td class="rodeo" rowspan="3">Tie-Down <br> Roping</td>
+                            </tr>
+                            <tr>
+                                <td>3 pm</td>
+                                <td class="queue" >Rollercoaster</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4 pm</td>
+                                <td></td>
+                                <td></td>
+                                <td class="concert" rowspan="2">Russ</td>
+                                <td class="queue" >Drop of Doom</td>
+                            </tr>
+                            <tr>
+                                <td>5 pm</td>
+                                <td></td>
+                                <td class="queue" >Bonzai</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6 pm</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7 pm</td>
+                                <td class="concert" >Dean Brody</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8 pm</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
