@@ -57,6 +57,10 @@ body,html{
     justify-content: flex-start; 
 }
 
+.header-text {
+    padding-left: 12%;
+}
+
 .table-row {
     width: 80%; 
     height: 80px; 
