@@ -6,6 +6,7 @@ body,html{
     background: #FFF6EA;
 }
 
+
 .flex{
     display:flex;
     justify-content: center;
@@ -16,13 +17,26 @@ body,html{
     width:100%;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
+}
+
+.header{
+    width:100%;
+}
+
+.home-icon{
+    width:80px;
+    height:80px;
+    padding-left:1%;
 }
 
 .title{
     padding-top:2%;
     font-size:75px;
     margin:0;
+    flex:1;
     text-align: center;
+    transform: translateX(-40px);
 }
 
 .search{
@@ -44,6 +58,7 @@ body,html{
     height:100%;
     border:3px solid red;
     position:relative;
+    max-width: 600px;
 }
 
 .attraction-image{
@@ -67,6 +82,7 @@ body,html{
 @media screen and (max-width: 640px){
     .title{
         font-size:40px;
+        transform: translateX(0);
     }
 
     .search{
@@ -78,6 +94,11 @@ body,html{
         grid-template-rows: repeat(4,200px);
         grid-gap:50px;
         margin:5%;
+    }
+
+    .home-icon{
+        width:40px;
+        height:40px;
     }
 
 
