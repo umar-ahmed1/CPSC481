@@ -15,8 +15,69 @@
                 <div id="add-menu">
                     <button onclick="closeAddMenu()" class="close-btn">Back</button>
                     <div class="add-menu-title">Add Item:</div>
-                    <div class="date">Date: July 9th</div>
-                    <button class="go">Go</button>
+                    <div class="date-go">
+                        <div class="date">Select Date: &nbsp; July</div>
+                        <div class="date-field">
+                            <input id="numberField" type="number" value="09" min="9" max="18" readonly>
+                            <div class="arrows">
+                                <div onclick="increment()" class="arrow up">&#9650;</div>
+                                <div onclick="decrement()" class="arrow down">&#9660;</div>
+                            </div>
+                        </div>
+                        <button class="go">Go</button>
+                    </div>
+                    <div class="results">
+                        <div class="event-type-rodeo">Rodeos</div>
+                        <div class="event-card">
+                            <div class="event-card-info">
+                                <div class="event-card-name"><span>Name: </span>Bull Riding</div>
+                                <div class="event-card-time"><span>Time: </span>4PM - 6PM</div>
+                                <div class="event-card-loc"><span>Place: </span>Stadium</div>
+                            </div>
+                            <button onclick="change(this)" class="event-card-btn">ADD</button>
+                        </div>   
+                        <div class="event-card">
+                            <div class="event-card-info">
+                                <div class="event-card-name"><span>Name: </span>Tie-Down Roping</div>
+                                <div class="event-card-time"><span>Time: </span>11AM - 3PM</div>
+                                <div class="event-card-loc"><span>Place: </span>Stadium</div>
+                            </div>
+                            <button onclick="change(this)"  class="event-card-btn">ADD</button>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-card-info">
+                                <div class="event-card-name"><span>Name: </span>Barrell Racing</div>
+                                <div class="event-card-time"><span>Time: </span>12PM - 2PM</div>
+                                <div class="event-card-loc"><span>Place: </span>Stadium</div>
+                            </div>
+                            <button onclick="change(this)"  class="event-card-btn">ADD</button>
+                        </div> 
+                        <div class="event-type-concert">Concerts</div> 
+                        <div class="event-card">
+                            <div class="event-card-info">
+                                <div class="event-card-name"><span>Name: </span>Russ</div>
+                                <div class="event-card-time"><span>Time: </span>4PM - 6PM</div>
+                                <div class="event-card-loc"><span>Place: </span>Stadium</div>
+                            </div>
+                            <button onclick="change(this)" class="event-card-btn">ADD</button>
+                        </div>   
+                        <div class="event-card">
+                            <div class="event-card-info">
+                                <div class="event-card-name"><span>Name: </span>Vance Joy</div>
+                                <div class="event-card-time"><span>Time: </span>12PM - 3PM</div>
+                                <div class="event-card-loc"><span>Place: </span>Stadium</div>
+                            </div>
+                            <button onclick="change(this)"  class="event-card-btn">ADD</button>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-card-info">
+                                <div class="event-card-name"><span>Name: </span>Dean Brody</div>
+                                <div class="event-card-time"><span>Time: </span>12PM - 2PM</div>
+                                <div class="event-card-loc"><span>Place: </span>Stadium</div>
+                            </div>
+                            <button onclick="change(this)"  class="event-card-btn">ADD</button>
+                        </div>               
+                    </div>
                 </div>
                 <div class="side">
                     <button onclick="addMenu()" class="add-btn">Add Event</button>
@@ -131,7 +192,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <td class="queue">Ferris Wheel</td>
                                 <td></td>
                             </tr>
                             
