@@ -4,8 +4,6 @@
     <head>
         <link rel="stylesheet" href="../assets/css/map.css">
     </head>
-    <!-- TODO: Add a show all and clear all button (without implementation) 
-    Add a sample map icon info panel (without implementation)-->
     
     <body>
         <div class="sidebar">
@@ -14,12 +12,14 @@
             </div>
             <div class="scrollbar">
                 <div>
+                    <button type="button" class="show-button">Show All</button>
+                    <button type="button" class="hide-button">Hide All</button>
                     <ul id="mapUL">
-                        <li><span class="category">Concerts</span>
+                        <li><span class="category" id="start-concerts-expanded">Concerts</span>
                             <ul class="nested">
                                 <li><span class="unchecked">Coke Stage</span></li>
                                 <li><span class="unchecked">Cowboys</span></li>
-                                <li><span class="unchecked">Nashville North</span></li>
+                                <li><span class="unchecked" id="start-nashville-north-clicked">Nashville North</span></li>
     
                             </ul>
                         </li>
@@ -72,6 +72,8 @@
             </div>
 
             <img id="map" src="../assets/images/map.png" />
+            <img class="hardcoded-marker" src="../assets/images/mapmarker.png" />
+            <img class="hardcoded-infobar" src="../assets/images/infobar.png"/>
         </div>
         <script src="../assets/js/mapPage.js"></script>
     </body>

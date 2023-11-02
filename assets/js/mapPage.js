@@ -15,6 +15,8 @@ for (i = 0; i < toggler.length; i++) {
   });
 }
 
+document.getElementById("start-concerts-expanded").click();
+document.getElementById("start-nashville-north-clicked").click();
 
 function zoom(zoom) {
   let map = document.getElementById("map");
