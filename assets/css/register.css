@@ -16,33 +16,41 @@ body {
 
 .header {
     position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 100vw;
     height: 30vh;
 }
 
 .header-img {
+    position:absolute;
     width: 100vw;
     height: 30vh;
     opacity: 0.7;
 }
 
 .heading-container {
-    position: absolute;
-    /* text-align: center; */
-    top: 20%;
-    left: 25%;
+    margin-top: 3%;
+    position: relative;
 }
 
 .heading {
-    font-size: 100px;
+    font-size: 75px;
     margin: 0;
     font-weight: 700;
+    text-align: center;
+}
+
+.dissapear{
+    display:block;
 }
 
 .sub-heading {
     font-size: 30px;
     font-weight: 600;
     margin: 0;
+    text-align: center;
 }
 
 .horizontal-flex {
@@ -53,14 +61,14 @@ body {
 }
 
 .s1 {
-    width: 400px;
+    width: 25%;
     height: 400px;
     margin-left: 20px;
     opacity: 0.9;
 }
 
 .s2 {
-    width: 400px;
+    width: 25%;
     height: 400px;
     margin-right: 20px;
     opacity: 0.9;
@@ -73,6 +81,7 @@ body {
 
 .reg-form {
     display: flex;
+    width:50%;
     height: 70vh;
     flex-direction: column;
     justify-content: space-evenly;
@@ -93,8 +102,23 @@ body {
 
 .inner-flex {
     display: flex;
-    flex-direction: row;
-    gap: 40px;
+    width:75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel-btn{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.submit-btn{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 
 .cancel-btn input[type="submit"] {
@@ -112,4 +136,41 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+}
+
+@media screen and (max-width: 640px){
+    .dissapear{
+        display:none;
+    }
+
+    .heading{
+        font-size:60px;
+    }
+
+    .sub-heading{
+        font-size:30px;
+    }
+    
+    .heading-container{
+        width:100%;
+    }
+
+    .reg-form{
+        width:100%;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    .heading{
+        font-size:45px;
+    }
+
+    .inner-flex{
+        width:100%;
+    }
+
+    .sub-heading{
+        font-size:25px;
+    }
 }
