@@ -36,6 +36,15 @@ img {
     font-weight: 700;
 }
 
+.home-icon{
+    position:absolute;
+    top:25%;
+    left:5%;
+    width:80px;
+    height:80px;
+    opacity: 1;
+}
+
 .main {
     display: flex;
     flex-direction: row;

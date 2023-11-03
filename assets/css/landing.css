@@ -90,9 +90,15 @@ body,html{
 
 .grid-item-title{
     margin:0;
-    padding:0;
+    padding:2%;
+    background-color: #f9efe2;
     font-size:40px;
     text-align: center;
+}
+
+.grid-item-title:hover{
+    cursor:pointer;
+    opacity:0.7;
 }
 
 .images-container{
