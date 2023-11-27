@@ -98,6 +98,7 @@ body {
     height: 25px;
     border: 1px solid;
     border-radius: 20px;
+    padding: 2%;
 }
 
 .inner-flex {
@@ -136,6 +137,25 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+}
+
+.cancel-btn input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.submit-btn input:hover[type="submit"] {
+    cursor:pointer;
+    opacity:0.8;
+}
+
+.cancel-btn input:hover[type="submit"] {
+    cursor:pointer;
+    opacity:0.8;
 }
 
 @media screen and (max-width: 640px){
