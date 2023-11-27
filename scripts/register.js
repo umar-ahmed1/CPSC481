@@ -9,7 +9,7 @@ function registerUser(event) {
     const password = document.getElementById('password').value;
     const rePassword = document.getElementById('re-password').value;
 
-    //check if passwords match
+    // Check if passwords match
     if (password !== rePassword) {
         alert('Passwords do not match');
         return;
@@ -23,12 +23,18 @@ function registerUser(event) {
         password: password
     };
 
-    // Store user details in local storage
-    localStorage.setItem('user', JSON.stringify(user));
+    // Get existing users from local storage
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Add the new user to the array
+    users.push(user);
+
+    // Store updated user array in local storage
+    localStorage.setItem('users', JSON.stringify(users));
     console.log('User registered:', user);
 
-    //redirect the user
-    window.location.href = 'landing.html'
+    // Redirect the user
+    window.location.href = 'landing.html';
 }
 
 // Attach event listener to the form
