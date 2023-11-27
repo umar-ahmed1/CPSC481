@@ -39,7 +39,7 @@ const logoutButton = document.getElementById("logout");
 //set the logout button onclick to sign out by removing loggedinuser and redirecting to main page
 logoutButton.onclick = function () {
     localStorage.removeItem('loggedInUser');
-    window.location.href = "../";
+    window.location.href = "";
 }
 
 // If there's a logged-in user, show the logout button and not the register/sign in button
