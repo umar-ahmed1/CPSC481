@@ -25,3 +25,9 @@ function loginUser(event) {
 // Attach event listener to the form
 const loginForm = document.querySelector('.reg-form');
 loginForm.addEventListener('submit', loginUser);
+
+//get the cancel button and set its onclick to return to the main page
+const cancelButton = document.getElementById('cancel')
+cancelButton.onclick = function () {
+    window.location.href = 'landing.html'
+}

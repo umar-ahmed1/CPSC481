@@ -40,3 +40,10 @@ function registerUser(event) {
 // Attach event listener to the form
 const registerForm = document.querySelector('.reg-form');
 registerForm.addEventListener('submit', registerUser);
+
+
+//get the cancel button and set its onclick to return to the main page
+const cancelButton = document.getElementById('cancel')
+cancelButton.onclick = function () {
+    window.location.href = 'landing.html'
+}

@@ -133,7 +133,7 @@ body {
     align-items:center;
 }
 
-.cancel-btn input[type="submit"] {
+.cancel-btn button{
     width:50%;
     height: 50px;
     background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
@@ -148,6 +148,16 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+}
+
+.cancel-btn button:hover{
+    cursor:pointer;
+    opacity:0.8;
+}
+
+.submit-btn input[type="submit"]:hover {
+    cursor:pointer;
+    opacity:0.8;
 }
 
 
