@@ -178,6 +178,18 @@ input[type=number]::-webkit-outer-spin-button {
     border: 2px solid black;
 }
 
+.event-popup-btn {
+    width: 70px;
+    height: 25px;
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    font-size: 15px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .event-card-btn {
     width: 50px;
     height: 25px;

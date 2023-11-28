@@ -295,6 +295,7 @@ function addEventToPlannerData(eventToAdd, date) {
 }
 
 function removeEventFromPlannerData(eventToRemove, date) {
+    console.log(eventToRemove, date);
     for (let index = 0; index < planner_data.length; index++) {
         if (planner_data[index].date == date) {
             planner_data[index].events = planner_data[index].events.filter(e => e.title !== eventToRemove.title);
@@ -353,6 +354,10 @@ function update_planner() {
             if (startSlot < rows && col < cols) {
                 planner[startSlot][col] = {
                     title: event.title,
+                    date: dayData.date,
+                    start: event.start,
+                    end: event.end,
+                    place: event.place,
                     styles: {
                         "eventType": event["event-type"],
                         "rowspan": duration
@@ -391,6 +396,9 @@ function createTBodyFromArray(array, tableId) {
                 if (cell.styles.fontSize) {
                     td.style.fontSize = cell.styles.fontSize;
                 }
+                td.addEventListener('click', () => {
+                    eventClicked(cell);
+                });
                 tr.appendChild(td);
             }
         });
@@ -401,6 +409,62 @@ function createTBodyFromArray(array, tableId) {
     table.appendChild(tbody);
 }
 
+function eventClicked(e) {
+    console.log(e);
+    // Create the popup element
+    const popup = document.createElement('div');
+    popup.className = 'event-popup'; // Add a class for styling
+
+    const eventPopupInfo = document.createElement('div');
+    eventPopupInfo.className = 'event-popup-info';
+
+    const eventPopupName = document.createElement('div');
+    eventPopupName.className = 'event-popup-name';
+    eventPopupName.innerHTML = `<span>Name: </span>${e.title}`;
+    const eventPopupTime = document.createElement('div');
+    eventPopupTime.className = 'event-popup-time';
+    eventPopupTime.innerHTML = `<span>Time: </span>${e.start} - ${e.end}`;
+    const eventPopupLoc = document.createElement('div');
+    eventPopupLoc.className = 'event-popup-loc';
+    eventPopupLoc.innerHTML = `<span>Place: </span>${e.place}`;
+
+    eventPopupInfo.appendChild(eventPopupName);
+    eventPopupInfo.appendChild(eventPopupTime);
+    eventPopupInfo.appendChild(eventPopupLoc);
+
+    // Add a close button to the popup
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.className = 'event-popup-btn';
+    closeButton.onclick = function() {
+        popup.remove();
+    };
+    // Add a remove button to the popup
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.className = 'event-popup-btn';
+    removeButton.onclick = function() {
+        popup.remove()
+        removeEventFromPlannerData(e, e.date);
+        redrawPlanner();
+    };
+    popup.appendChild(eventPopupInfo);
+    popup.appendChild(closeButton);
+    popup.appendChild(removeButton);
+
+    // Add the popup to the body of the document
+    document.body.appendChild(popup);
+
+    // Style the popup (example styles)
+    popup.style.position = 'fixed';
+    popup.style.top = '50%';
+    popup.style.left = '50%';
+    popup.style.transform = 'translate(-50%, -50%)';
+    popup.style.backgroundColor = 'white';
+    popup.style.padding = '20px';
+    popup.style.border = '1px solid black';
+    popup.style.zIndex = '1000'; // Ensure it's above other elements
+}
 
 
 
