@@ -25,15 +25,15 @@ body,html{
 }
 
 .home-icon{
-    width:85px;
-    height:85px;
-    margin-left:5%;
+    width:50px;
+    height:50px;
+    margin-left:3%;
 }
 
 .scrollbartoptext {
     font-family: "Inter-Regular", Helvetica;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 25px;
     text-align: center;
     margin-top:1%;
     margin-left:20%;
@@ -96,34 +96,33 @@ ul {
     display: block;
 }
 
+.checkbox {
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
 .unchecked {
     cursor: pointer;
     user-select: none;
 }
 
 .unchecked::before {
-    content: "\2610";
     color: red;
-    display: inline-block;
-    margin-right: 6px;
+    content: "\2610";
 }
 
 .checked::before {
+    color: red;
     content: "\2611";
 }
 
-.map-div {
-    width: 80%;
-    height: 100%;
-    overflow: auto;
-}
-
 .button-div {
-    position: absolute;
+    position: fixed;
     height: 7%;
     width: 8%;
     padding: 2px;
     text-align: center;
+    z-index: 10;
 }
 
 .zoom {
@@ -132,20 +131,59 @@ ul {
     width: 45%;
 }
 
-.hardcoded-marker {
-    position: absolute;
-    left: 750px;
-    top: 730px;
-    height: 10%;
-    width: 8%;
+.map-div {
+    width: 80%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
     z-index: 1;
 }
 
-.hardcoded-infobar {
+.map-image {
+    height: 3840px;
+    width: 2160px;
+    background: url('../images/map.png');
+    background-size: contain;
+    position: relative;
+}
+
+.attraction-highlight{
+    border-radius: 10px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #FF914D;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    z-index: 1;
+}
+
+.monster-energy {
+    top: 31%; 
+    left: 52%;
+    height: 6%;
+    width: 9%;
+    display: none;
+}
+
+.zipper {
+    top: 66%; 
+    left: 12%;
+    height: 6%;
+    width: 11%;
+    display: none;
+}
+
+.show-home {
+    top: 61%; 
+    left: 24%;
+    height: 7%;
+    width: 12%;
+    display: none;
+}
+
+.nashville-north {
+    top: 69%; 
+    left: 34%;
+    height: 8%;
+    width: 15%;
+    display: none;
 }
