@@ -1,15 +1,13 @@
 <html>
     <head>
         <link rel="stylesheet" href="../assets/css/dayplanner.css">
-        <script src="../scripts/add.js"></script>
+        <script src="../scripts/dayplanner.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="header">
                 <img src="../assets/images/landingheader.png" alt="header img">
-                <a href="../">
-                    <img src="../assets/images/home-black.svg" class="home-icon" alt="home icon">
-                </a>
+                <img src="../assets/images/home-black.svg" class="home-icon" alt="home icon">
                 <div class="title">DAY PLANNER</div>
             </div>
             <div class="page"><span class="lt">&lt;</span>&nbsp;&nbsp;Page 1&nbsp;&nbsp;<span class="gt">&gt;</span></div>
@@ -27,10 +25,10 @@
                                 <div onclick="decrement()" class="arrow down">&#9660;</div>
                             </div>
                         </div>
-                        <button class="go">Go</button>
+                        <button class="go" onclick="getEvents()">Go</button>
                     </div>
                     <div class="results">
-                        <div class="event-type-rodeo">Rodeos</div>
+                        <!-- <div class="event-type-rodeo">Rodeos</div>
                         <div class="event-card">
                             <div class="event-card-info">
                                 <div class="event-card-name"><span>Name: </span>Bull Riding</div>
@@ -79,11 +77,12 @@
                                 <div class="event-card-loc"><span>Place: </span>Stadium</div>
                             </div>
                             <button onclick="change(this)"  class="event-card-btn">ADD</button>
-                        </div>               
+                        </div>                -->
                     </div>
                 </div>
                 <div class="side">
                     <button onclick="addMenu()" class="add-btn">Add Event</button>
+                    <button onclick="redirectToAttractions()" class="join-queue-btn">Join A Queue</button>
                     <div class="filter">
                         <span class="f">Filter:</span>
                         <ul>
@@ -104,7 +103,7 @@
                     
                 </div>
                 <div class="planner">
-                    <table>
+                    <table id="stampede-planner">
                         <thead>
                             <tr>
                                 <th></th>
@@ -150,91 +149,6 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>10 am</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>11 am</td>
-                                <td class="rodeo" rowspan="2">Bull Riding</td>
-                                <td></td>
-                                <td class="queue" >Orbiter</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>12 pm</td>
-                                <td></td>
-                                <td></td>
-                                <td class="concert" >Charley <br> Crockett</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 pm</td>
-                                <td></td>
-                                <td></td>
-                                <td class="queue" >Zipper</td>
-                                <td></td>
-                                <td class="rodeo" rowspan="2">Barrell <br> Racing</td>
-                            </tr>
-                            <tr>
-                                <td>2 pm</td>
-                                <td></td>
-                                <td class="concert" rowspan="2">Vance Joy</td>
-                                <td></td>
-                                <td class="rodeo" rowspan="3">Tie-Down <br> Roping</td>
-                            </tr>
-                            <tr>
-                                <td>3 pm</td>
-                                <td class="queue" >Rollercoaster</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>4 pm</td>
-                                <td></td>
-                                <td></td>
-                                <td class="concert" rowspan="2">Russ</td>
-                                <td class="queue" >Drop of Doom</td>
-                            </tr>
-                            <tr>
-                                <td>5 pm</td>
-                                <td></td>
-                                <td class="queue" >Bonzai</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>6 pm</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>7 pm</td>
-                                <td class="concert" >Dean Brody</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>8 pm</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="queue">Ferris Wheel</td>
-                                <td></td>
-                            </tr>
-                            
-                        </tbody>
                     </table>
                 </div>
             </div>

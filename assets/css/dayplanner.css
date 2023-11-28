@@ -206,7 +206,7 @@ span {
 }
 
 
-.add-btn {
+.add-btn, .join-queue-btn {
     margin-top: 20px;
     width:200px;
     height: 95px;
@@ -221,7 +221,7 @@ span {
 .side {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
 }
 
 .filter {
@@ -342,6 +342,7 @@ tbody > tr > td:nth-child(1) {
     padding-right: 4px;
     font-weight: bold;
 }
+
 
 .schedule-to-map {
     width: 25px; 
