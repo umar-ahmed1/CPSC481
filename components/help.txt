@@ -1,1 +1,0 @@
-use this directory for any html objects that are reusable, like a `back` button which will look the same on several pages

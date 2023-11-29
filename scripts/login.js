@@ -15,7 +15,7 @@ function loginUser(event) {
     //If user details correct, store the logged in user and redirect to landing page
     if (user) {
         localStorage.setItem('loggedInUser', JSON.stringify(user));
-        window.location.href = 'landing.html';
+        window.location.href = '../';
     // Display an error message
     } else {
         alert('Invalid email or password. Please try again.');
@@ -29,5 +29,5 @@ loginForm.addEventListener('submit', loginUser);
 //get the cancel button and set its onclick to return to the main page
 const cancelButton = document.getElementById('cancel')
 cancelButton.onclick = function () {
-    window.location.href = 'landing.html'
+    window.location.href = '../'
 }

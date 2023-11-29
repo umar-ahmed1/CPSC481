@@ -2,14 +2,14 @@
 const registerButton = document.getElementById("register")
 //set the register button onclick to redirect the page
 registerButton.onclick = function () {
-    window.location.href = 'register.html'
+    window.location.href = 'pages/register.html'
 }
 
 //get the login button
 const loginButton = document.getElementById("login")
 //set the login button onclick to redirect the page
 loginButton.onclick = function () {
-    window.location.href = 'login.html'
+    window.location.href = 'pages/login.html'
 }
 
 
@@ -20,15 +20,15 @@ const plannerButton = document.getElementById("planner")
 
 //make each button redirect to the required page
 mapButton.onclick = function () {
-    window.location.href = 'map.html'
+    window.location.href = 'pages/map.html'
 }
 
 queueButton.onclick = function () {
-    window.location.href = 'attractions.html'
+    window.location.href = 'pages/attractions.html'
 }
 
 plannerButton.onclick = function () {
-    window.location.href = 'dayplanner.html'
+    window.location.href = 'pages/dayplanner.html'
 }
 
 
@@ -39,7 +39,7 @@ const logoutButton = document.getElementById("logout");
 //set the logout button onclick to sign out by removing loggedinuser and redirecting to main page
 logoutButton.onclick = function () {
     localStorage.removeItem('loggedInUser');
-    window.location.href = 'landing.html';
+    window.location.href = "";
 }
 
 // If there's a logged-in user, show the logout button and not the register/sign in button

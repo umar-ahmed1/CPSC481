@@ -34,7 +34,7 @@ function registerUser(event) {
     console.log('User registered:', user);
 
     // Redirect the user
-    window.location.href = 'landing.html';
+    window.location.href = '../';
 }
 
 // Attach event listener to the form
@@ -45,5 +45,5 @@ registerForm.addEventListener('submit', registerUser);
 //get the cancel button and set its onclick to return to the main page
 const cancelButton = document.getElementById('cancel')
 cancelButton.onclick = function () {
-    window.location.href = 'landing.html'
+    window.location.href = '../'
 }
