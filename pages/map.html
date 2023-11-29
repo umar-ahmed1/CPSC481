@@ -8,55 +8,36 @@
     <body>
         <div class="sidebar">
             <div class="red-gradient">
-                <img src="../assets/images/home-white.svg" class="home-icon" alt="home-icon">
+                <a href="../">
+                    <img src="../assets/images/home-white.svg" class="home-icon" alt="home-icon">
+                </a>
                 <div class="scrollbartoptext">STAMPEDE<br/>MAP</div>
             </div>
             <div class="scrollbar">
                 <div>
-                    <button type="button" class="show-button">Show All</button>
-                    <button type="button" class="hide-button">Hide All</button>
+                    <button onclick="toggleVisibility('block')" type="button" class="show-button">Show All</button>
+                    <button onclick="toggleVisibility('none')" type="button" class="hide-button">Hide All</button>
                     <ul id="mapUL">
-                        <li><span class="category" id="start-concerts-expanded">Concerts</span>
+                        <li><span class="category">Concerts</span>
                             <ul class="nested">
-                                <li><span class="unchecked">Coke Stage</span></li>
-                                <li><span class="unchecked">Cowboys</span></li>
-                                <li><span class="unchecked" id="start-nashville-north-clicked">Nashville North</span></li>
-    
+                                <li><span id="nashvilleNorthSelector" class="checkbox unchecked">Nashville North</span></li>
                             </ul>
                         </li>
                         <li><span class="category">Rides</span>
                             <ul class="nested">
-                                <li><span class="unchecked">Crazy Mouse</span></li>
-                                <li><span class="unchecked">Outlaw</span></li>
+                                <li><span id="zipperSelector" class="checkbox unchecked">Zipper</span></li>
                             </ul>
                         </li>
-                        <li><span class="category">Food & Drink</span>
+                        <li><span class="category">Exhibitions</span>
                             <ul class="nested">
-                                <li><span class="category">Featured</span>
+                                <li><span class="category">Walkthroughs</span>
                                     <ul class="nested">
-                                        <li><span class="unchecked">Ben's BBQ</span></li>
-                                        <li><span class="unchecked">Richard's Ribs</span></li>
-                                        <li><span class="unchecked">Lemonade Stand</span></li>
+                                        <li><span id="showHomeSelector" class="checkbox unchecked">Dream Home Walkthrough</span></li>
                                     </ul>
                                 </li>
-                                <li><span class="category">Local</span>
+                                <li><span class="category">Shows</span>
                                     <ul class="nested">
-                                        <li><span class="unchecked">Ben's BBQ</span></li>
-                                        <li><span class="unchecked">Richard's Ribs</span></li>
-                                        <li><span class="unchecked">DogFather</span></li>
-                                    </ul>
-                                </li>
-                                <li><span class="category">Snacks</span>
-                                    <ul class="nested">
-                                        <li><span class="unchecked">Dave's Donuts</span></li>
-                                        <li><span class="unchecked">Cathy's Cotton Candy</span></li>
-                                    </ul>
-                                </li>
-                                <li><span class="category">Drinks</span>
-                                    <ul class="nested">
-                                        <li><span class="unchecked">Lenomade Stand</span></li>
-                                        <li><span class="unchecked">Slushie Stand</span></li>
-                                        <li><span class="unchecked">Beer Gardens</span></li>
+                                        <li><span id="monsterEnergySelector" class="checkbox unchecked">Monster Energy Motocross</span></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -71,7 +52,12 @@
                 <button class="zoom" id="zoom-in" onclick="zoom(1)">+</button>
                 <button class="zoom" id="zoom-out" onclick="zoom(-1)">-</button>
             </div>
-            <img id="map" class="map" src="../assets/images/map.png" />
+            <div id="mapImage" class="map-image">
+                <div onclick="redirect('trick-riding')" id="monsterEnergy" class="attraction-highlight monster-energy"></div>
+                <div onclick="redirect('zipper')" id="zipper" class="attraction-highlight zipper"></div>
+                <div onclick="redirect('show-home')" id="showHome" class="attraction-highlight show-home"></div>
+                <div onclick="redirect('nashville-north')" id="nashvilleNorth" class="attraction-highlight nashville-north"></div>
+            </div>
         </div>
         <script src="../scripts/mapPage.js"></script>
     </body>

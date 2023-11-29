@@ -178,6 +178,18 @@ input[type=number]::-webkit-outer-spin-button {
     border: 2px solid black;
 }
 
+.event-popup-btn {
+    width: 70px;
+    height: 25px;
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    font-size: 15px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .event-card-btn {
     width: 50px;
     height: 25px;
@@ -206,7 +218,7 @@ span {
 }
 
 
-.add-btn {
+.add-btn, .join-queue-btn {
     margin-top: 20px;
     width:200px;
     height: 95px;
@@ -221,7 +233,7 @@ span {
 .side {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
 }
 
 .filter {
@@ -342,6 +354,7 @@ tbody > tr > td:nth-child(1) {
     padding-right: 4px;
     font-weight: bold;
 }
+
 
 .schedule-to-map {
     width: 25px; 
