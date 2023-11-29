@@ -5,26 +5,30 @@
     <body>
         <div class="container">
             <div class="header">
-                <a href="../">
-                    <img src="../assets/images/home-white.svg" class="home-icon" alt="home icon">
+                <a href="../" class="red-gradient home-button">
+                    <div style="width:40px; height: 40px; margin: auto; margin-top: 22.5px;">
+                        <img style="width:40px; height: 40px;"src="../assets/images/home-white.svg">
+                    </div>            
                 </a>
-                <img class="header-img" src="../assets/images/zipper-header.png" alt="header image">
-                <div class="zipper-container">
-                    <div class="zipper-text">The Zipper</div>
+                <img id="header-image" class="header-img">
+                <div class="title-container">
+                    <div id="title" class="title-text">Loading</div>
                 </div>
             </div>
 
             <div class="first">
-                <div class="time-slot">July 8, 12:20pm - 12:25pm</div>
-                <button>Leave Queue</button>
+                <div class="time-slot">July 9</div>
+                <div id="timeslot" class="time-slot">Loading</div>
+                <button onclick="viewSchedule()" class="red-gradient">View Schedule</button>
+                <button onclick="viewAttraction()" class="red-gradient">Leave Queue</button>
             </div>
             <div class="second">
-                <div class="desc">Please be sure to arrive at the ride at least three minutes prior to your time slot. 
-                    Present your QR code to the ride attendant when 
-                    you are in first position.
+                <div class="desc">Please be sure to arrive at the attraction at least three minutes prior to your time slot. 
+                    Present your QR code to the attendant when your timeslot has begun for admittance.
                 </div>
                 <img class="qr-img" src="../assets/images/qr.png" alt="QR code">
             </div>
         </div>
     </body>
+    <script type="module" src="../scripts/slot.js"></script>
 </html>

@@ -1,6 +1,17 @@
 import { attractionData } from "./constants.js";
 
 
+function joinQueue (time) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const queue = 'slot.html'
+
+    let timeslot = "?timeslot=" + time
+    timeslot += "&attraction=" + urlParams.get('attraction'); 
+    window.open(queue + timeslot, '_blank');
+}
+
 function loadAttraction() {
     // get the query params for the attraction 
     const queryString = window.location.search;
@@ -18,3 +29,4 @@ function loadAttraction() {
 }
 
 loadAttraction();
+window.joinQueue = joinQueue;

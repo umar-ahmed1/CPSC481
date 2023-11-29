@@ -12,7 +12,7 @@ body,html{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 25%;
+    width: 15%;
 }
 
 .red-gradient {
@@ -118,21 +118,29 @@ ul {
 
 .button-div {
     position: fixed;
-    height: 7%;
+    height: 15%;
     width: 8%;
     padding: 2px;
     text-align: center;
     z-index: 10;
 }
 
+.toggle {
+    font-size: 12px;
+    height: 25%;
+    width: 100%;
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+}
+
 .zoom {
     font-size: 35px;
-    height: 80%;
-    width: 45%;
+    height: 30%;
+    width: 40%;
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
 }
 
 .map-div {
-    width: 80%;
+    width: 85%;
     height: 100%;
     overflow-x: auto;
     overflow-y: auto;
@@ -154,6 +162,12 @@ ul {
     border-style: solid;
     border-color: #FF914D;
     position: absolute;
+}
+
+.attraction-highlight:hover{
+    background-color: #FF914D;
+    border-color: #FF3131;
+    opacity: .5;
 }
 
 .monster-energy {

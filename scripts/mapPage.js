@@ -19,13 +19,32 @@ for (i = 0; i < toggler.length; i++) {
       this.classList.remove("unchecked"); 
     }
     highlightBox = document.getElementById(this.id.replace('Selector','')); 
-    console.log(highlightBox.style.display);
+
     if (highlightBox.style.display === "block") {
       highlightBox.style.display = "none";
     } else {
       highlightBox.style.display = "block";
     }
   });
+}
+
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('show-sidebar');
+  const mapDiv = document.getElementById('mapContainer');
+
+  if (sidebar.style.display === "block") {
+    toggleButton.textContent = "Show Sidebar";
+    sidebar.style.display = "none";
+    
+    mapDiv.style.width = '100%';
+  } else {
+    toggleButton.textContent = "Hide Sidebar";
+    sidebar.style.display = "block";
+
+    mapDiv.style.width = '85%';
+
+  }
 }
 
 function zoom(zoomFactor) {

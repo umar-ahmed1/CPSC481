@@ -6,7 +6,7 @@
     </head>
     
     <body>
-        <div class="sidebar">
+        <div id="sidebar" class="sidebar">
             <div class="red-gradient">
                 <a href="../">
                     <img src="../assets/images/home-white.svg" class="home-icon" alt="home-icon">
@@ -48,6 +48,7 @@
         </div>
         <div class="map-div" id="mapContainer">
             <div class="button-div">
+                <button class="toggle" id="show-sidebar" onclick="toggleSidebar()">Hide Sidebar</button>
                 <div>ZOOM</div>
                 <button class="zoom" id="zoom-in" onclick="zoom(1)">+</button>
                 <button class="zoom" id="zoom-out" onclick="zoom(-1)">-</button>

@@ -15,6 +15,18 @@ body {
     position: relative;
 }
 
+.red-gradient {
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%)
+}
+
+.home-button {
+    left: 0px; 
+    top: 0px; 
+    height: 90px; 
+    width: 90px;
+    position: absolute;
+}
+
 .header-img {
     width: 100vw;
     height: 30vh;
@@ -28,7 +40,7 @@ body {
     left:30px;
 }
 
-.zipper-container {
+.title-container {
     display: flex;
     justify-content: center;  
     align-items: center;
@@ -41,7 +53,7 @@ body {
     left: 150px;
 }
 
-.zipper-text {
+.title-text {
     text-align: center;
     font-size: 40px;
     font-weight: 70px;
@@ -54,20 +66,19 @@ body {
 }
 .time-slot {
     display: inline;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: bold;
     margin-left: 100px;
     letter-spacing: 5px;
 }
 
 button {
-    width: 20vw;
+    width: 15vw;
     height: 7vh;
-    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 25px;
-    margin-right: 100px;
+    margin-right: 25px;
 }
 
 .second {

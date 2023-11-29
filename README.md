@@ -6,3 +6,6 @@ Group members:
 - Ryan Chrumka, ryan.chrumka@ucalgary.ca
 - Braedon Haensel, braedon.haensel@ucalgary.ca
 - Josh Vanderstoop, joshua.vanderstoop@ucalgary.ca 
+
+
+Please note that the image used for the interactive map background was found on the Calgary Stampede website at "https://www.calgarystampede.com/map" and may be subject to copyright.

@@ -1,6 +1,6 @@
 export const attractionData = {
     "trick-riding": {
-        "title": "Trick Riding", 
+        "title": "Monster Energy Motocross", 
         "description": "Get ready for high-flying excitement as fearless motocross riders perform jaw-dropping stunts and flips " + 
                        "in our thrilling MX trick riding show at the Calgary Stampede!", 
         "waitTime": "28 minutes", 
@@ -21,7 +21,7 @@ export const attractionData = {
         "image": '../assets/images/nashville.jpg'
     },
     "show-home": {
-        "title": "Show Home Tour", 
+        "title": "Dream Home Tour", 
         "description": "Experience the epitome of luxury in our stunning show home. Immerse yourself in impeccable design, spacious " +
                        "living, and exquisite details that define modern comfort and style. This showcase of beauty and innovation " +
                        "offers a glimpse into your dream lifestyle.", 
