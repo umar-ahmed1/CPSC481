@@ -102,14 +102,31 @@ body {
     padding:2%;
 }
 
+.email{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.forgot-div{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .forgot {
     display: block;
     border: none;
     background-color: #FFF6EA;
     font-size: 13px;
     font-weight: bold;
-    margin-left: 185px;
     text-decoration: underline;
+}
+
+.forgot:hover{
+    cursor:pointer;
 }
 
 .inner-flex {
