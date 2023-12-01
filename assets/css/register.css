@@ -81,7 +81,7 @@ body {
 
 .reg-form {
     display: flex;
-    width:50%;
+    width:750%;
     height: 70vh;
     flex-direction: column;
     justify-content: space-evenly;
@@ -109,14 +109,14 @@ body {
 }
 
 .cancel-btn{
-    width:50%;
+    width:33%;
     display: flex;
     justify-content: center;
     align-items:center;
 }
 
 .submit-btn{
-    width:50%;
+    width:33%;
     display: flex;
     justify-content: center;
     align-items:center;

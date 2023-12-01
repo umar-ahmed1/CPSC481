@@ -129,3 +129,8 @@ body,html{
     font-weight: 700;
     text-align: center;
 }
+
+.button-beige:hover{
+    cursor:pointer;
+    opacity:0.8;
+}
