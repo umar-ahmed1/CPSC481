@@ -85,10 +85,10 @@ const planner_data_1 = [
 document.addEventListener('DOMContentLoaded', () => {
     update_planner();
     createTBodyFromArray(planner, 'stampede-planner');
+    initializeCheckboxes();
 });
 
 function redrawPlanner() {
-    console.log("redrawing");
     const table = document.getElementById('stampede-planner');
 
     const existingTbody = table.querySelector('tbody');
@@ -257,7 +257,7 @@ function getEvents() {
 
 
 // DAY PLANNER FUNCTIONS
-const planner_data = [
+let planner_data = [
     {
         "day": "Mon",
         "date": "09",
@@ -295,7 +295,6 @@ function addEventToPlannerData(eventToAdd, date) {
 }
 
 function removeEventFromPlannerData(eventToRemove, date) {
-    console.log(eventToRemove, date);
     for (let index = 0; index < planner_data.length; index++) {
         if (planner_data[index].date == date) {
             planner_data[index].events = planner_data[index].events.filter(e => e.title !== eventToRemove.title);
@@ -336,7 +335,6 @@ function update_planner() {
     planner_data.forEach(dayData => {
         const col = date_conversion[dayData.date];
         dayData.events.forEach(event => {
-            console.log(event.title);
             let [startHour, startMinutes] = event.start.split(':').map(Number);
             let [endHour, endMinutes] = event.end.split(':').map(Number);
 
@@ -411,7 +409,6 @@ function createTBodyFromArray(array, tableId) {
 
 function eventClicked(e) {
     disableBackgroundInteraction();
-    console.log(e);
     // Create the popup element
     const popup = document.createElement('div');
     popup.className = 'event-popup'; // Add a class for styling
@@ -442,7 +439,6 @@ function eventClicked(e) {
     closeButton.className = 'event-popup-btn';
     closeButton.onclick = function() {
         popup.remove();
-        enableBackgroundInteraction();
     };
     // Add a remove button to the popup
     const removeButton = document.createElement('button');
@@ -450,7 +446,6 @@ function eventClicked(e) {
     removeButton.className = 'event-popup-btn';
     removeButton.onclick = function() {
         popup.remove()
-        enableBackgroundInteraction();
         removeEventFromPlannerData(e, e.date);
         redrawPlanner();
     };
@@ -478,15 +473,6 @@ function eventClicked(e) {
     removeButton.style.marginTop = '10px';
 }
 
-function disableBackgroundInteraction() {
-    const body = document.body;
-    body.style.pointerEvents = 'none'; // Disable pointer events on the body
-}
-
-function enableBackgroundInteraction() {
-    const body = document.body;
-    body.style.pointerEvents = 'auto'; // Re-enable pointer events on the body
-}
 
 
 
@@ -499,3 +485,39 @@ function redirectToAttractions() {
 function redirectToLanding() {
     window.location.href = 'landing.html'
 }
+
+
+function initializeCheckboxes() {
+    // Select all checkboxes with the class 'hidden-checkbox'
+    var checkboxes = document.querySelectorAll('.hidden-checkbox');
+
+    // Iterate over each checkbox and attach an event listener
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            filterEvents(this);
+        });
+    });
+}
+
+
+let planner_data_backup = JSON.parse(JSON.stringify(planner_data)); // Backup original planner data
+function filterEvents(checkbox) {
+    if (checkbox.checked) {
+        for (let index = 0; index < planner_data.length; index++) {
+            let date = planner_data[index].date;
+            let events = planner_data[index].events;
+            for (let j = 0; j < events.length; j++) {
+                if (events[j]['event-type'] !== checkbox.id) {
+                    removeEventFromPlannerData(events[j], date);
+                }
+                
+            }
+            
+        }
+    } else {
+        // Restore original planner data when a checkbox is unchecked
+        planner_data = JSON.parse(JSON.stringify(planner_data_backup));
+    }
+    redrawPlanner();
+}
+
