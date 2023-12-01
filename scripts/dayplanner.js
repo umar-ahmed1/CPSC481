@@ -410,6 +410,7 @@ function createTBodyFromArray(array, tableId) {
 }
 
 function eventClicked(e) {
+    disableBackgroundInteraction();
     console.log(e);
     // Create the popup element
     const popup = document.createElement('div');
@@ -432,12 +433,16 @@ function eventClicked(e) {
     eventPopupInfo.appendChild(eventPopupTime);
     eventPopupInfo.appendChild(eventPopupLoc);
 
+    const btnFlex = document.createElement('div');
+    btnFlex.className = 'btn-flex';
+
     // Add a close button to the popup
     const closeButton = document.createElement('button');
     closeButton.textContent = 'Close';
     closeButton.className = 'event-popup-btn';
     closeButton.onclick = function() {
         popup.remove();
+        enableBackgroundInteraction();
     };
     // Add a remove button to the popup
     const removeButton = document.createElement('button');
@@ -445,17 +450,19 @@ function eventClicked(e) {
     removeButton.className = 'event-popup-btn';
     removeButton.onclick = function() {
         popup.remove()
+        enableBackgroundInteraction();
         removeEventFromPlannerData(e, e.date);
         redrawPlanner();
     };
     popup.appendChild(eventPopupInfo);
-    popup.appendChild(closeButton);
-    popup.appendChild(removeButton);
+    btnFlex.appendChild(closeButton);
+    btnFlex.appendChild(removeButton);
 
+    popup.appendChild(btnFlex)
     // Add the popup to the body of the document
     document.body.appendChild(popup);
 
-    // Style the popup (example styles)
+    // Style the popup 
     popup.style.position = 'fixed';
     popup.style.top = '50%';
     popup.style.left = '50%';
@@ -464,8 +471,22 @@ function eventClicked(e) {
     popup.style.padding = '20px';
     popup.style.border = '1px solid black';
     popup.style.zIndex = '1000'; // Ensure it's above other elements
+    btnFlex.style.display = 'flex';
+    btnFlex.style.justifyContent = 'space-around';
+    btnFlex.style.flexDirection = 'row';
+    closeButton.style.marginTop = '10px';
+    removeButton.style.marginTop = '10px';
 }
 
+function disableBackgroundInteraction() {
+    const body = document.body;
+    body.style.pointerEvents = 'none'; // Disable pointer events on the body
+}
+
+function enableBackgroundInteraction() {
+    const body = document.body;
+    body.style.pointerEvents = 'auto'; // Re-enable pointer events on the body
+}
 
 
 
@@ -474,4 +495,7 @@ function eventClicked(e) {
 // SIDE BAR FUNCTIONS
 function redirectToAttractions() {
     window.location.href = 'attractions.html'
+}
+function redirectToLanding() {
+    window.location.href = 'landing.html'
 }
