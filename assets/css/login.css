@@ -199,6 +199,15 @@ body {
         width:100%;
     }
 
+    .cancel-btn,.submit-btn{
+        width:40%;
+        margin-right:2%;
+    }
+
+    .cancel-btn button, .submit-btn input[type="submit"]{
+        width:100%;
+    }
+
 
 }
 
