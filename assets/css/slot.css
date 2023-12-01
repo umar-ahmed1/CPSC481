@@ -81,6 +81,12 @@ button {
     margin-right: 25px;
 }
 
+button:hover{
+    cursor:pointer;
+    opacity:0.9;
+}
+
+
 .second {
     margin-top: 40px;
     display: flex;
