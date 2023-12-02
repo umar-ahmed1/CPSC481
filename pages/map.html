@@ -54,10 +54,39 @@
                 <button class="zoom" id="zoom-out" onclick="zoom(-1)">-</button>
             </div>
             <div id="mapImage" class="map-image">
-                <div onclick="redirect('trick-riding')" id="monsterEnergy" class="attraction-highlight monster-energy"></div>
-                <div onclick="redirect('zipper')" id="zipper" class="attraction-highlight zipper"></div>
-                <div onclick="redirect('show-home')" id="showHome" class="attraction-highlight show-home"></div>
-                <div onclick="redirect('nashville-north')" id="nashvilleNorth" class="attraction-highlight nashville-north"></div>
+                <div onclick="redirect('trick-riding')" id="monsterEnergy" class="attraction-highlight-queue monster-energy">
+                    <div class="attraction-display-name-queue">Trick Riding</div>
+                </div>
+                <div onclick="redirect('zipper')" id="zipper" class="attraction-highlight-queue zipper">
+                    <div class="attraction-display-name-queue">The Zipper</div>
+                </div>
+                <div onclick="redirect('show-home')" id="showHome" class="attraction-highlight-queue show-home">
+                    <div class="attraction-display-name-queue">Show Home</div>
+                </div>
+                <div onclick="redirect('nashville-north')" id="nashvilleNorth" class="attraction-highlight-queue nashville-north">
+                    <div class="attraction-display-name-queue">Nashville North</div>
+                </div>
+                <div id="agriculture" class="attraction-highlight">
+                    <div class="attraction-display-name"></div>
+                </div>
+                <div id="coca" class="attraction-highlight">
+                    <div class="attraction-display-name"></div>
+                </div>
+                <div id="infield" class="attraction-highlight">
+                    <div class="attraction-display-name"></div>
+                </div>
+                <div id="northern" class="attraction-highlight">
+                    <div class="attraction-display-name"></div>
+                </div>                                  
+                <div id="trailblazer" class="attraction-highlight">
+                    <div class="attraction-display-name"></div>
+                </div>
+                <div id="ferris" class="attraction-highlight">
+                    <div class="attraction-display-name"></div>
+                </div>
+                <div id="rangeland" class="attraction-highlight">
+                    <div class="attraction-display-name"></div>
+                </div>            
             </div>
         </div>
         <script src="../scripts/mapPage.js"></script>

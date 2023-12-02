@@ -160,15 +160,57 @@ ul {
     border-radius: 10px;
     border-width: 8px;
     border-style: solid;
-    border-color: #FF914D;
+    border-color: #98b9d8;
     position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.attraction-highlight:hover{
+.attraction-highlight-queue{
+    border-radius: 10px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #FF914D;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attraction-highlight-queue:hover{
     background-color: #FF914D;
     border-color: #FF3131;
     opacity: .5;
     cursor:pointer;
+}
+
+.attraction-display-name-queue{
+    background-color: white;
+    padding: 10px 10px;
+    height:30px;
+    text-align: center;
+    border:8px solid #FF914D;
+    position:absolute;
+    top:-62px;
+    left:0;
+    right:0;
+    font-weight: 700;
+    font-size:18px;
+}
+
+.attraction-display-name{
+    background-color: white;
+    padding: 10px 10px;
+    height:30px;
+    text-align: center;
+    border:8px solid #98b9d8;
+    position:absolute;
+    top:-62px;
+    left:0;
+    right:0;
+    font-weight: 700;
+    font-size:18px;
 }
 
 .monster-energy {
@@ -200,5 +242,53 @@ ul {
     left: 34%;
     height: 8%;
     width: 15%;
+    display: none;
+}
+
+#agriculture{
+    top: 54%; 
+    left: 51%;
+    height: 8%;
+    width: 23%;
+    display: none;
+}
+
+#coca{
+    top: 73%; 
+    left: 14%;
+    height: 7%;
+    width: 10%;
+    display: none;
+}
+
+#infield{
+    top: 81.5%; 
+    left: 56%;
+    height: 11%;
+    width: 10%;
+    display: none;
+}
+
+#northern{
+    top: 55%; 
+    left: 76%;
+    height: 8%;
+    width: 11%;
+    display: none;
+}
+
+#trailblazer{
+    top: 55%; 
+    left: 76%;
+    height: 8%;
+    width: 11%;
+    display: none;
+}
+
+#ferris{
+    top: 0%; 
+    left: 0%;
+    height: 8%;
+    width: 11%;
     display: none;
 }

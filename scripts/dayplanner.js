@@ -5,15 +5,14 @@ const planner_data_1 = [
         "day": "Mon",
         "date": "09",
         "events": [
-            { "start": "10", "end": "11", "title": "Morning Jazz Session", "event-type": "concert", "place": "Jazz Hall" },
-            { "start": "1", "end": "2", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage" },
-            { "start": "3", "end": "5", "title": "Rock Legends Live", "event-type": "concert", "place": "Main Arena" },
-            { "start": "11", "end": "12", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring" },
-            { "start": "2", "end": "3", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field" },
-            { "start": "4", "end": "5", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena" },
-            { "start": "12", "end": "1", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone" },
-            { "start": "3", "end": "4", "title": "Thunder Roller Coaster", "event-type": "queue", "place": "Adrenaline Alley" },
-            { "start": "5", "end": "6", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows" }
+            { "start": "10", "end": "11", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "11", "end": "12", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "2", "end": "3", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "4", "end": "5", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" },
+            { "start": "1", "end": "2", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12", "end": "1", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
+            { "start": "3", "end": "4", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"saddledome"},
+            { "start": "5", "end": "6", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"}
         ]
     },
     // July 10 (Tuesday)
@@ -21,7 +20,7 @@ const planner_data_1 = [
         "day": "Tue",
         "date": "10",
         "events": [
-            { "start": "10", "end": "11", "title": "Classical Melodies", "event-type": "concert", "place": "Orchestra Pit" },
+            { "start": "10", "end": "11", "title": "Classical Melodies", "event-type": "concert", "place": "Orchestra Pit","map":""},
             { "start": "1", "end": "2", "title": "Hip Hop Beats", "event-type": "concert", "place": "Urban Stage" },
             { "start": "4", "end": "6", "title": "Evening Blues", "event-type": "concert", "place": "Blues Corner" },
             { "start": "11", "end": "12", "title": "Rodeo Clown Show", "event-type": "rodeo", "place": "Clown Arena" },
@@ -151,7 +150,8 @@ function change(button, date, event) {
             "end": event.end,
             "title": event.title,
             "event-type": event["event-type"],
-            "place": event.place
+            "place": event.place,
+            "map":event.map,
         }
         addEventToPlannerData(event_obj, date);
     } else { // removed an event

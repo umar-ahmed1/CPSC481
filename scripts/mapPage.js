@@ -1,3 +1,31 @@
+
+
+// Function to update the map div based on the event
+function updateMapDiv(event) {
+  const mapDiv = document.getElementById(event.map);
+
+  // Check if the map div exists
+  if (mapDiv) {
+    // Set display to block
+    mapDiv.style.display = "block";
+
+    // Update attraction-display-name with the title of the event
+    const attractionDisplayName = mapDiv.querySelector('.attraction-display-name');
+    if (attractionDisplayName) {
+      attractionDisplayName.textContent = event.title;
+    }
+  }
+}
+document.addEventListener("DOMContentLoaded", function() {
+  //get the parameters from the url
+  const urlParams = new URLSearchParams(window.location.search);
+  const eventsParam = urlParams.get('arg');
+  const eventsArray = JSON.parse(decodeURIComponent(eventsParam));
+  console.log(eventsArray)
+  // Iterate through the events and update the corresponding map divs
+  eventsArray.forEach(updateMapDiv);
+})
+
 var toggler = document.getElementsByClassName("category");
 var i;
 
@@ -101,23 +129,3 @@ function toggleVisibility(display) {
 }
 
 
-// SCHEDULE-TO-MAP FUNCTIONS
-
-function getQueryParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const arg = getQueryParam('arg');
-  if (arg) {
-      try {
-          const listOfEvents = JSON.parse(decodeURIComponent(arg));
-          console.log("Received events:", listOfEvents);
-
-          // Additional logic to handle listOfEvents goes here
-      } catch (e) {
-          console.error("Error parsing query parameter:", e);
-      }
-  }
-});
