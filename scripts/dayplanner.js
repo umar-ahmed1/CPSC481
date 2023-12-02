@@ -84,19 +84,32 @@ const planner_data_1 = [
 
 document.addEventListener('DOMContentLoaded', () => {
     update_planner();
-    createTBodyFromArray(planner, 'stampede-planner');
-    initializeCheckboxes();
+
+    var checkboxes = document.querySelectorAll('.hidden-checkbox');
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            setVar(this); 
+        });
+    });
+
+    // Set up event listeners for all clickable images
+    document.querySelectorAll('.schedule-to-map').forEach(img => {
+        img.addEventListener('click', function() {
+            const arg = this.getAttribute('data-arg');
+            onImageClick(arg);
+        });
+    });
 });
 
-function redrawPlanner() {
-    const table = document.getElementById('stampede-planner');
+// function redrawPlanner() {
+//     const table = document.getElementById('stampede-planner');
 
-    const existingTbody = table.querySelector('tbody');
-    table.removeChild(existingTbody);
+//     const existingTbody = table.querySelector('tbody');
+//     table.removeChild(existingTbody);
 
-    update_planner();
-    createTBodyFromArray(planner, 'stampede-planner');
-}
+//     update_planner();
+//     createTBodyFromArray(planner, 'stampede-planner');
+// }
 
 
 // POP-UP WINDOW FUNCTIONS
@@ -143,7 +156,8 @@ function change(button, date, event) {
         removeEventFromPlannerData(event, date);
     }
     // console.log(planner_data);
-    redrawPlanner();
+    // redrawPlanner();
+    update_planner()
     // console.log(planner);
 }
 
@@ -290,17 +304,17 @@ function addEventToPlannerData(eventToAdd, date) {
         if (planner_data[index].date == date) {
             planner_data[index].events.push(eventToAdd);
         }
-        
     }
+    update_planner();
 }
 
 function removeEventFromPlannerData(eventToRemove, date) {
     for (let index = 0; index < planner_data.length; index++) {
         if (planner_data[index].date == date) {
             planner_data[index].events = planner_data[index].events.filter(e => e.title !== eventToRemove.title);
-        }
-        
+        }     
     }
+    update_planner();
 }
 
 
@@ -310,7 +324,7 @@ let planner = new Array(rows);
 
 
 
-function update_planner() {
+function update_planner(filteredData = planner_data) {
     for (let i = 0; i < rows; i++) {
         planner[i] = [];
         for (let j = 0; j < cols; j++) {
@@ -332,7 +346,7 @@ function update_planner() {
 
     let date_conversion = {"09": "1", "10": "2", "11": "3", "12": "4", "13": "5"};
     
-    planner_data.forEach(dayData => {
+    filteredData.forEach(dayData => {
         const col = date_conversion[dayData.date];
         dayData.events.forEach(event => {
             let [startHour, startMinutes] = event.start.split(':').map(Number);
@@ -370,13 +384,18 @@ function update_planner() {
             }
         });
     });
+    createTBodyFromArray(planner, "stampede-planner");
 }
 
 
 function createTBodyFromArray(array, tableId) {
     const table = document.getElementById(tableId);
+    
+    if (table.querySelector('tbody')) {
+        table.removeChild(table.querySelector('tbody'));
+    }
+    
     const tbody = document.createElement('tbody');
-
     array.forEach(row => {
         const tr = document.createElement('tr');
 
@@ -408,7 +427,6 @@ function createTBodyFromArray(array, tableId) {
 }
 
 function eventClicked(e) {
-    disableBackgroundInteraction();
     // Create the popup element
     const popup = document.createElement('div');
     popup.className = 'event-popup'; // Add a class for styling
@@ -447,7 +465,8 @@ function eventClicked(e) {
     removeButton.onclick = function() {
         popup.remove()
         removeEventFromPlannerData(e, e.date);
-        redrawPlanner();
+        // redrawPlanner();
+        update_planner();
     };
     popup.appendChild(eventPopupInfo);
     btnFlex.appendChild(closeButton);
@@ -486,38 +505,92 @@ function redirectToLanding() {
     window.location.href = 'landing.html'
 }
 
+let all = true;
+let queue = false;
+let concert = false;
+let rodeo = false;
 
-function initializeCheckboxes() {
-    // Select all checkboxes with the class 'hidden-checkbox'
-    var checkboxes = document.querySelectorAll('.hidden-checkbox');
-
-    // Iterate over each checkbox and attach an event listener
-    checkboxes.forEach(function(checkbox) {
-        checkbox.addEventListener('change', function() {
-            filterEvents(this);
-        });
-    });
-}
-
-
-let planner_data_backup = JSON.parse(JSON.stringify(planner_data)); // Backup original planner data
-function filterEvents(checkbox) {
-    if (checkbox.checked) {
-        for (let index = 0; index < planner_data.length; index++) {
-            let date = planner_data[index].date;
-            let events = planner_data[index].events;
-            for (let j = 0; j < events.length; j++) {
-                if (events[j]['event-type'] !== checkbox.id) {
-                    removeEventFromPlannerData(events[j], date);
-                }
-                
+function setVar(cb) {
+    switch (cb.id) {
+        case 'all':
+            all = cb.checked;
+            // If 'All' is checked, uncheck other filters
+            if (all) {
+                queue = concert = rodeo = false;
+                updateCheckboxState();
             }
-            
-        }
-    } else {
-        // Restore original planner data when a checkbox is unchecked
-        planner_data = JSON.parse(JSON.stringify(planner_data_backup));
+            break;
+        case 'queue':
+            queue = cb.checked;
+            break;
+        case 'concert':
+            concert = cb.checked;
+            break;
+        case 'rodeo':
+            rodeo = cb.checked;
+            break;
     }
-    redrawPlanner();
+
+    // Reset 'All' if any specific filter is checked
+    if (queue || concert || rodeo) {
+        all = false;
+        updateCheckboxState();
+    }
+
+    // Now call the function to update the planner view based on these filters
+    updateUI();
+
 }
+
+function updateCheckboxState() {
+    document.getElementById('all').checked = all;
+    document.getElementById('queue').checked = queue;
+    document.getElementById('concert').checked = concert;
+    document.getElementById('rodeo').checked = rodeo;
+}
+
+function getFilteredEvents() {
+    let filteredEvents = [];
+
+    // If 'all' is checked, return all events
+    if (all) {
+        return planner_data;
+    }
+
+    // Filter events based on checkbox state
+    planner_data.forEach(day => {
+        let filteredDayEvents = day.events.filter(event => {
+            return (queue && event["event-type"] === "queue") ||
+                   (concert && event["event-type"] === "concert") ||
+                   (rodeo && event["event-type"] === "rodeo");
+        });
+
+        if (filteredDayEvents.length > 0) {
+            filteredEvents.push({ ...day, events: filteredDayEvents });
+        }
+    });
+
+    return filteredEvents;
+}
+
+function updateUI() {
+    let filteredData = getFilteredEvents();
+    update_planner(filteredData);  // Pass filtered data to update the planner view
+}
+
+
+
+// Function to be called when an image is clicked
+function onImageClick(arg) {
+    let listOfEvents = [];
+    for (let index = 0; index < planner_data.length; index++) {
+        if (planner_data[index].date == arg) {
+            listOfEvents = listOfEvents.concat(planner_data[index].events);
+        }
+    }
+    const serializedEvents = JSON.stringify(listOfEvents);
+    window.location.href = `map.html?arg=${encodeURIComponent(serializedEvents)}`;
+}
+
+
 

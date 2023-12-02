@@ -101,3 +101,23 @@ function toggleVisibility(display) {
 }
 
 
+// SCHEDULE-TO-MAP FUNCTIONS
+
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const arg = getQueryParam('arg');
+  if (arg) {
+      try {
+          const listOfEvents = JSON.parse(decodeURIComponent(arg));
+          console.log("Received events:", listOfEvents);
+
+          // Additional logic to handle listOfEvents goes here
+      } catch (e) {
+          console.error("Error parsing query parameter:", e);
+      }
+  }
+});
