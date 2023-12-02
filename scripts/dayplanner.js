@@ -83,6 +83,10 @@ const planner_data_1 = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+    const savedData = localStorage.getItem('plannerData');
+    if (savedData) {
+        planner_data = JSON.parse(savedData);
+    }
     update_planner();
 
     var checkboxes = document.querySelectorAll('.hidden-checkbox');
@@ -384,6 +388,7 @@ function update_planner(filteredData = planner_data) {
             }
         });
     });
+    localStorage.setItem('plannerData', JSON.stringify(planner_data));
     createTBodyFromArray(planner, "stampede-planner");
 }
 
@@ -591,6 +596,8 @@ function onImageClick(arg) {
     const serializedEvents = JSON.stringify(listOfEvents);
     window.location.href = `map.html?arg=${encodeURIComponent(serializedEvents)}`;
 }
+
+
 
 
 
