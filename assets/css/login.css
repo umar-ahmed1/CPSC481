@@ -31,7 +31,7 @@ body {
 }
 
 .heading-container {
-    margin-top: 3%;
+    margin-top: 2%;
     position: relative;
 }
 
@@ -61,48 +61,39 @@ body {
     width:100%;
 }
 
-.s1 {
-    width:25%;
-    height: 400px;
-    margin-left: 20px;
-    opacity: 0.9;
-}
-
-.s2 {
-    width:25%;
-    height: 400px;
-    margin-right: 20px;
-    opacity: 0.9;
-}
-
 .reg-form {
+    margin-top:3%;
     display: flex;
     width:50%;
     height: 70vh;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .title {
-    font-size: 50px;
+    font-size: 75px;
     font-weight: 700;
 }
 
 .reg-form label {
     display: block;
     font-weight: bold;
-    margin-left: 5px;
-}
-.reg-form input {
-    width: 300px;
-    height: 25px;
-    border: 1px solid;
-    border-radius: 20px;
-    padding:2%;
+    margin-left: 2%;
+    font-size: 25px;
 }
 
-.email{
+#email, #password{
+    width: 350px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 20px;
+    padding:5% 7%;
+    font-size:20px;
+}
+
+.email,.pass{
+    margin-top:5%;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -120,7 +111,7 @@ body {
     display: block;
     border: none;
     background-color: #FFF6EA;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -130,6 +121,7 @@ body {
 }
 
 .inner-flex {
+    margin-top:5%;
     display: flex;
     width:75%;
     align-items: center;

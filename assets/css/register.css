@@ -60,22 +60,8 @@ body {
     align-items: center;
 }
 
-.s1 {
-    width: 25%;
-    height: 400px;
-    margin-left: 20px;
-    opacity: 0.9;
-}
-
-.s2 {
-    width: 25%;
-    height: 400px;
-    margin-right: 20px;
-    opacity: 0.9;
-}
-
 .title {
-    font-size: 50px;
+    font-size: 75px;
     font-weight: 700;
 }
 
@@ -91,14 +77,18 @@ body {
 .reg-form label {
     display: block;
     font-weight: bold;
-    margin-left: 5px;
+    margin-left: 2%;
+    font-size: 25px;
 }
-.reg-form input {
-    width: 300px;
-    height: 25px;
+
+
+#name,#email,#re-email,#password,#re-password{
+    width: 350px;
+    height: 40px;
     border: 1px solid;
     border-radius: 20px;
-    padding: 2%;
+    padding:5% 7%;
+    font-size:20px;
 }
 
 .inner-flex {

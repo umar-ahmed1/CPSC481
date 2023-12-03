@@ -9,7 +9,7 @@ function joinQueue (time) {
 
     let timeslot = "?timeslot=" + time
     timeslot += "&attraction=" + urlParams.get('attraction'); 
-    window.open(queue + timeslot, '_blank');
+    window.location.href = queue + timeslot, '_blank';
 }
 
 function loadAttraction() {
