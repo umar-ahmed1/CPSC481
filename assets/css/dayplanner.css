@@ -23,13 +23,13 @@ body {
 img {
     width: 100vw;
     height: 30vh;
-    opacity: 0.7;
+    opacity: 0.55;
 }
 
 .title {
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 36%;
     text-align: left;
     font-size: 100px;
     margin: 0;
@@ -62,7 +62,7 @@ img {
 }
 
 #add-menu {
-    width: 800px;
+    width: 550px;
     height: 400px;
     left: 50px;
     background-color: #FFF6EA;
@@ -176,7 +176,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 40%;
+    width: 60%;
     margin: auto;
     margin-left: 12px;
     margin-bottom: 20px;
@@ -343,15 +343,23 @@ td:nth-child(1) {
 }
 
 .rodeo {
-    background-color: #CB6CE3;
+    background-color: #ff8585;
+    font-weight: 700;
 }
 
 .queue {
-    background-color: #FF5757;
+    background-color: #f8c194;
+    font-weight: 700;
 }
 
 .concert {
-    background-color: #5CE1E6;
+    background-color: #bfebec;
+    font-weight: 700;
+}
+
+.rodeo:hover,.queue:hover,.concert:hover{
+    opacity:0.8;
+    cursor:pointer;
 }
 
 tbody > tr > td:nth-child(1) {

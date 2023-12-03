@@ -431,6 +431,8 @@ function eventClicked(e) {
     // Create the popup element
     const popup = document.createElement('div');
     popup.className = 'event-popup'; // Add a class for styling
+    //if invalid then return
+    if(!e.start) return;
 
     const eventPopupInfo = document.createElement('div');
     eventPopupInfo.className = 'event-popup-info';

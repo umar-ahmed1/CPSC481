@@ -5,6 +5,7 @@ body,html{
     width:100%;
     background: #FFF6EA;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .flex{
@@ -32,7 +33,6 @@ body,html{
     position: absolute; 
     color: black; 
     font-size: 40px; 
-    font-family: Inter; 
     font-weight: 600;
 }
 
@@ -66,7 +66,6 @@ body,html{
 .info-text {
     color: black; 
     font-size: 30px; 
-    font-family: Inter; 
     font-weight: 700; 
     word-wrap: break-word;
     padding: 20px;
@@ -114,7 +113,6 @@ body,html{
     color: black; 
     width: 40%;
     font-size: 35px; 
-    font-family: Inter; 
     font-weight: 700; 
     text-align: center;
 }
@@ -125,7 +123,6 @@ body,html{
     background: #FFF6EA;
     border-radius: 70px;
     font-size: 40px;
-    font-family: Inter;
     font-weight: 700;
     text-align: center;
 }
