@@ -10,8 +10,8 @@ const planner_data_1 = [
             { "start": "2", "end": "3", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
             { "start": "4", "end": "5", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" },
             { "start": "1", "end": "2", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12", "end": "1", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
-            { "start": "3", "end": "4", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"saddledome"},
+            { "start": "12", "end": "1", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "3", "end": "4", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"ferris"},
             { "start": "5", "end": "6", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"}
         ]
     },
@@ -20,14 +20,14 @@ const planner_data_1 = [
         "day": "Tue",
         "date": "10",
         "events": [
-            { "start": "11", "end": "12", "title": "Horse Showcase", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
-            { "start": "10", "end": "11", "title": "Rodeo", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "4", "end": "5", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "10", "end": "11", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "11", "end": "12", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "12", "end": "1", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "1", "end": "2", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
             { "start": "2", "end": "3", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" },
-            { "start": "12", "end": "1", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "1", "end": "2", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
-            { "start": "5", "end": "6", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"saddledome"},
-            { "start": "3", "end": "4", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"}
+            { "start": "3", "end": "4", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"},
+            { "start": "4", "end": "5", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "5", "end": "6", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
         ]
     },
     // July 11 (Wednesday)
@@ -595,7 +595,16 @@ function onImageClick(arg) {
     window.location.href = `map.html?arg=${encodeURIComponent(serializedEvents)}`;
 }
 
-
-
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    // Add event listener for the Clear Schedule button
+    const clearButton = document.getElementById('clear-button');
+    clearButton.addEventListener('click', clearSchedule);
+    
+    function clearSchedule() {
+        console.log('here')
+        planner_data.forEach(day => {
+            day.events = [];
+        });
+        update_planner();
+    }
+})

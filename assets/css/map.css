@@ -60,6 +60,11 @@ body,html{
   cursor: pointer;
 }
 
+.show-button:hover,.hide-button:hover{
+    cursor:pointer;
+    opacity:0.8;
+}
+
 ul {
     list-style-type: none;
     font-size: 35px;
@@ -130,6 +135,12 @@ ul {
     height: 25%;
     width: 100%;
     background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    font-weight: 700;
+}
+
+.toggle:hover,.zoom:hover{
+    cursor:pointer;
+    opacity:0.8;
 }
 
 .zoom {
@@ -160,7 +171,7 @@ ul {
     border-radius: 10px;
     border-width: 8px;
     border-style: solid;
-    border-color: #98b9d8;
+    border-color: #FF914D;
     position: absolute;
     display:flex;
     justify-content: center;
@@ -204,13 +215,20 @@ ul {
     padding: 10px 10px;
     height:30px;
     text-align: center;
-    border:8px solid #98b9d8;
+    border:8px solid #FF914D;
     position:absolute;
     top:-62px;
     left:0;
     right:0;
     font-weight: 700;
     font-size:18px;
+}
+
+.attraction-highlight:hover{
+    background-color: #FF914D;
+    border-color: #FF3131;
+    opacity: .5;
+    cursor:pointer;
 }
 
 .monster-energy {

@@ -8,6 +8,9 @@ function updateMapDiv(event) {
   if (mapDiv) {
     // Set display to block
     mapDiv.style.display = "block";
+    mapDiv.onclick = function () {
+      alert("Feature not implemented")
+    }
 
     // Update attraction-display-name with the title of the event
     const attractionDisplayName = mapDiv.querySelector('.attraction-display-name');
@@ -21,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const urlParams = new URLSearchParams(window.location.search);
   const eventsParam = urlParams.get('arg');
   const eventsArray = JSON.parse(decodeURIComponent(eventsParam));
-  console.log(eventsArray)
   // Iterate through the events and update the corresponding map divs
   eventsArray.forEach(updateMapDiv);
 })
