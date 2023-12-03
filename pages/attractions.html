@@ -6,28 +6,29 @@
     <body>
         <div class="container flex">
             <div class="header flex">
+                <img class="background-img" src="../assets/images/landingheader.png">
                 <a href="../" class="red-gradient home-button">
-                    <div style="width:100px; height: 100px; margin: auto;">
-                        <img style="width:100px; height: 100px;"src="../assets/images/home-white.svg">
+                    <div style="width:80px; height: 80px; margin: auto;">
+                        <img style="width:80px; height: 80px;"src="../assets/images/home-white.svg">
                     </div>            
                 </a>
-                <h1 class="title">MyStampede Attractions</h1>
+                <div class="title">MyStampede Attractions</div>
+                <input type="text" class="search" placeholder="Search" id="search">
             </div>
-            <input type="text" class="search" placeholder="Search">
             <div class="attraction-grid">
-                <div class="grid-item flex">
+                <div class="grid-item flex" id="trick-riding">
                     <img src="../assets/images/bike.jpg" alt="attraction1" class="attraction-image">
                     <button onclick="redirect('trick-riding')" class="ride-name">Trick Riding</button>
                 </div>
-                <div class="grid-item flex">
+                <div class="grid-item flex" id="the-zipper">
                     <img src="../assets/images/zipper-header.png" alt="attraction2" class="attraction-image">
                     <button onclick="redirect('zipper')" class="ride-name">The Zipper</button>
                 </div>
-                <div class="grid-item flex">
+                <div class="grid-item flex" id="nashville-north">
                     <img src="../assets/images/nashville.jpg" alt="attraction3" class="attraction-image">
                     <button onclick="redirect('nashville-north')" class="ride-name">Nashville North</button>
                 </div>
-                <div class="grid-item flex">
+                <div class="grid-item flex" id="show-home">
                     <img src="../assets/images/showhome.jpg" alt="attraction4" class="attraction-image">
                     <button onclick="redirect('show-home')" class="ride-name">Show Home Tour</button>
                 </div>
