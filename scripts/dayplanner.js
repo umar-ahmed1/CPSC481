@@ -20,15 +20,14 @@ const planner_data_1 = [
         "day": "Tue",
         "date": "10",
         "events": [
-            { "start": "10", "end": "11", "title": "Classical Melodies", "event-type": "concert", "place": "Orchestra Pit","map":""},
-            { "start": "1", "end": "2", "title": "Hip Hop Beats", "event-type": "concert", "place": "Urban Stage" },
-            { "start": "4", "end": "6", "title": "Evening Blues", "event-type": "concert", "place": "Blues Corner" },
-            { "start": "11", "end": "12", "title": "Rodeo Clown Show", "event-type": "rodeo", "place": "Clown Arena" },
-            { "start": "2", "end": "3", "title": "Barrel Racing Bonanza", "event-type": "rodeo", "place": "Fast Track" },
-            { "start": "5", "end": "6", "title": "Steer Wrestling Mania", "event-type": "rodeo", "place": "Rodeo Grounds" },
-            { "start": "12", "end": "1", "title": "Crazy Carousel", "event-type": "queue", "place": "Kiddie Land" },
-            { "start": "3", "end": "4", "title": "Splash Water Slide", "event-type": "queue", "place": "Water World" },
-            { "start": "6", "end": "7", "title": "Sky High Ferris Wheel", "event-type": "queue", "place": "Skyline View" }
+            { "start": "11", "end": "12", "title": "Horse Showcase", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "10", "end": "11", "title": "Rodeo", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "4", "end": "5", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "2", "end": "3", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" },
+            { "start": "12", "end": "1", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "1", "end": "2", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
+            { "start": "5", "end": "6", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"saddledome"},
+            { "start": "3", "end": "4", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"}
         ]
     },
     // July 11 (Wednesday)
@@ -36,15 +35,14 @@ const planner_data_1 = [
         "day": "Wed",
         "date": "11",
         "events": [
-            { "start": "10", "end": "11", "title": "Folk Music Hour", "event-type": "concert", "place": "Folk Stage" },
-            { "start": "2", "end": "3", "title": "Reggae Rhythms", "event-type": "concert", "place": "Beachfront" },
-            { "start": "5", "end": "7", "title": "Indie Bands Live", "event-type": "concert", "place": "Indie Venue" },
-            { "start": "11", "end": "12", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Rodeo Pen" },
-            { "start": "1", "end": "2", "title": "Saddle Bronc Riding", "event-type": "rodeo", "place": "Open Arena" },
-            { "start": "4", "end": "5", "title": "Team Roping", "event-type": "rodeo", "place": "Team Arena" },
-            { "start": "12", "end": "1", "title": "Magic Carousel", "event-type": "queue", "place": "Magic Circle" },
-            { "start": "3", "end": "4", "title": "Log Flume Adventure", "event-type": "queue", "place": "Adventure River" },
-            { "start": "6", "end": "7", "title": "Pirate Ship Swing", "event-type": "queue", "place": "Pirate Cove" }
+            { "start": "10", "end": "11", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "11", "end": "12", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "2", "end": "3", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "4", "end": "5", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" },
+            { "start": "1", "end": "2", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12", "end": "1", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
+            { "start": "3", "end": "4", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"saddledome"},
+            { "start": "5", "end": "6", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"}
         ]
     },
     // July 12 (Thursday)
@@ -52,15 +50,14 @@ const planner_data_1 = [
         "day": "Thu",
         "date": "12",
         "events": [
-            { "start": "10", "end": "11", "title": "Country Morning", "event-type": "concert", "place": "Country Hall" },
-            { "start": "1", "end": "2", "title": "Electronic Dance Party", "event-type": "concert", "place": "Dance Arena" },
-            { "start": "4", "end": "6", "title": "Soulful Evening", "event-type": "concert", "place": "Soul Stage" },
-            { "start": "11", "end": "12", "title": "Bareback Horse Riding", "event-type": "rodeo", "place": "Central Rodeo" },
-            { "start": "2", "end": "3", "title": "Goat Tying", "event-type": "rodeo", "place": "Goat Field" },
-            { "start": "5", "end": "6", "title": "Team Penning", "event-type": "rodeo", "place": "Team Pen" },
-            { "start": "12", "end": "1", "title": "Merry-Go-Round", "event-type": "queue", "place": "Family Fun Zone" },
-            { "start": "3", "end": "4", "title": "Extreme Zip Line", "event-type": "queue", "place": "Thrill Park" },
-            { "start": "6", "end": "7", "title": "Sky Drop Tower", "event-type": "queue", "place": "Sky High" }
+            { "start": "10", "end": "11", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "11", "end": "12", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "2", "end": "3", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "4", "end": "5", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" },
+            { "start": "1", "end": "2", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12", "end": "1", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
+            { "start": "3", "end": "4", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"saddledome"},
+            { "start": "5", "end": "6", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"}
         ]
     },
     // July 13 (Friday)
@@ -68,15 +65,14 @@ const planner_data_1 = [
         "day": "Fri",
         "date": "13",
         "events": [
-            { "start": "10", "end": "11", "title": "Acoustic Sunrise", "event-type": "concert", "place": "Serenity Stage" },
-            { "start": "2", "end": "3", "title": "Rhythm and Blues", "event-type": "concert", "place": "R&B Venue" },
-            { "start": "5", "end": "7", "title": "Classic Rock Evening", "event-type": "concert", "place": "Rock Hall" },
-            { "start": "11", "end": "12", "title": "Bronco Busting", "event-type": "rodeo", "place": "Bucking Arena" },
-            { "start": "1", "end": "2", "title": "Rodeo Queen Contest", "event-type": "rodeo", "place": "Main Stage" },
-            { "start": "4", "end": "5", "title": "Bullfighting Spectacle", "event-type": "rodeo", "place": "Arena of Bulls" },
-            { "start": "12", "end": "1", "title": "Enchanted Carousel", "event-type": "queue", "place": "Enchanted Land" },
-            { "start": "3", "end": "4", "title": "Space Rocket Ride", "event-type": "queue", "place": "Cosmic Zone" },
-            { "start": "6", "end": "7", "title": "Dinosaur Safari", "event-type": "queue", "place": "Dino Park" }
+            { "start": "10", "end": "11", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "11", "end": "12", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "2", "end": "3", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "4", "end": "5", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" },
+            { "start": "1", "end": "2", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12", "end": "1", "title": "Giant Ferris Wheel", "event-type": "queue", "place": "Fun Zone","map":"ferris"},
+            { "start": "3", "end": "4", "title": "The Dropper", "event-type": "queue", "place": "Adrenaline Alley","map":"saddledome"},
+            { "start": "5", "end": "6", "title": "Haunted Mansion Tour", "event-type": "queue", "place": "Ghostly Hallows","map":"funtier"}
         ]
     }
 ];
