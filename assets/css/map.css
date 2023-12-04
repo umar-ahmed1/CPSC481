@@ -67,7 +67,7 @@ body,html{
 
 ul {
     list-style-type: none;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #mapUL {
@@ -295,11 +295,19 @@ ul {
     display: none;
 }
 
-#trailblazer{
-    top: 55%; 
-    left: 76%;
+#skyride{
+    top: 42%; 
+    left: 16%;
     height: 8%;
-    width: 11%;
+    width: 21%;
+    display: none;
+}
+
+#saddledome{
+    top: 34%; 
+    left: 62%;
+    height: 15%;
+    width: 35%;
     display: none;
 }
 
