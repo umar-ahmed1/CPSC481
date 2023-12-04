@@ -1,15 +1,95 @@
 import { attractionData } from "./constants.js";
 
 
-function joinQueue (time) {
+let planner_data = null;
+let redirect = true;
+let date = "09";
+function joinQueue (start, end) {
+    let event_obj = {
+        "start": null,
+        "end": null,
+        "event-type": "queue",
+        "title": null,
+        "place": null,
+        "map": null
+    };
+    // get planner_data from local storage
+    const savedData = localStorage.getItem('plannerData');
+    if (savedData) {
+        console.log("found");
+        planner_data = JSON.parse(savedData);
+        console.log(planner_data);
+    }
+
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
     const queue = 'slot.html'
 
-    let timeslot = "?timeslot=" + time
+    let timeslot = "?timeslot=" + start
     timeslot += "&attraction=" + urlParams.get('attraction'); 
-    window.location.href = queue + timeslot, '_blank';
+    
+    const foo = {"zipper": "The Zipper", "nashville-north": "Nashville North", "trick-riding": "Trick Riding", "show-home": "Show Home"};
+    event_obj.title = foo[urlParams.get('attraction')];
+    event_obj.start = start;
+    event_obj.end = end;
+    
+    // add to planner_data
+    for (let index = 0; index < planner_data.length; index++) {
+        if (planner_data[index].date == date) {
+            if (!checkConflict(event_obj, date)) {
+                redirect = true;
+                planner_data[index].events.push(event_obj);
+            }
+            else {
+                redirect = false;
+                alert("You already have an event scheduled at this time!");
+                break;
+            }
+        }
+    }
+    localStorage.setItem('plannerData', JSON.stringify(planner_data));
+    console.log("hi");
+    if (redirect) {
+        console.log("hi1");
+        window.location.href = queue + timeslot, '_blank';
+    }
+
+}
+
+function checkConflict(e1, date) {
+    for (let index = 0; index < planner_data.length; index++) {
+        let events = planner_data[index].events;
+        if (planner_data[index].date == date) {
+            for (let i = 0; i < events.length; i++) {
+                if (events[i].start == e1.start || events[i].end == e1.end) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+function increment() {
+    var numberField = document.getElementById('numberField');
+    var currentValue = parseInt(numberField.value, 10);
+    if (currentValue < parseInt(numberField.max, 10)) {
+        numberField.value = currentValue + 1;
+    }
+}
+
+function decrement() {
+    var numberField = document.getElementById('numberField');
+    var currentValue = parseInt(numberField.value, 10);
+    if (currentValue > parseInt(numberField.min, 10)) {
+        numberField.value = currentValue - 1;
+    }
+}
+
+function getQueues() {
+    const getdate = document.getElementById("numberField").value;
+    date = getdate;
 }
 
 function loadAttraction() {
@@ -30,3 +110,6 @@ function loadAttraction() {
 
 loadAttraction();
 window.joinQueue = joinQueue;
+window.increment = increment;
+window.decrement = decrement;
+window.getQueues = getQueues;
