@@ -51,7 +51,9 @@ body,html{
 }
 
 .red-gradient {
-    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%)
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    width:100px;
+    height:100px;
 }
 
 .info-box {

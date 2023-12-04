@@ -15,15 +15,19 @@ body {
     position: relative;
 }
 
+a{
+
+}
+
 .red-gradient {
-    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%)
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
 }
 
 .home-button {
     left: 0px; 
     top: 0px; 
-    height: 90px; 
-    width: 90px;
+    height: 100px; 
+    width: 100px;
     position: absolute;
 }
 

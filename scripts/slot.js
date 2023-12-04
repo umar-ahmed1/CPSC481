@@ -23,7 +23,7 @@ function loadAttraction() {
 
 function viewSchedule() {
     const dayplanner = 'dayplanner.html'
-    window.open(dayplanner, '_blank');
+    window.location.href = dayplanner, '_blank';
 }
 
 function viewAttraction() {
