@@ -24,8 +24,20 @@ document.addEventListener("DOMContentLoaded", function() {
   const urlParams = new URLSearchParams(window.location.search);
   const eventsParam = urlParams.get('arg');
   const eventsArray = JSON.parse(decodeURIComponent(eventsParam));
-  // Iterate through the events and update the corresponding map divs
-  eventsArray.forEach(updateMapDiv);
+  if (eventsArray){
+    console.log("eventsarr",eventsArray)
+    // Iterate through the events and update the corresponding map divs
+    eventsArray.forEach(updateMapDiv);
+  }
+
+  //update the map divs for all non queue events
+  const attractionsNoQueue = document.getElementsByClassName('attraction-highlight')
+  Array.from(attractionsNoQueue).forEach((queue) => {
+    queue.onclick = function () {
+      alert("Feature not implemented")
+    }
+  });
+  
 })
 
 var toggler = document.getElementsByClassName("category");
