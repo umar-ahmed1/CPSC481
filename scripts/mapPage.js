@@ -76,6 +76,7 @@ function toggleSidebar() {
 
   }
 }
+toggleSidebar();
 
 function zoom(zoomFactor) {
   let mapImage = document.getElementById("mapImage");
@@ -96,6 +97,7 @@ function zoom(zoomFactor) {
       mapImage.style.backgroundSize = `${newWidth}px ${newHeight}px`;
     }
 }
+zoom(-4.5);
 
 function redirect(param) {
   const attractionsHome = 'attractions-home.html'
@@ -130,4 +132,5 @@ function toggleVisibility(display) {
   }  
 }
 
-
+// Set starting position of map
+document.getElementById("mapContainer").scrollTo(0, 1600);
