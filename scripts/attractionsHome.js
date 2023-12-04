@@ -16,9 +16,7 @@ function joinQueue (start, end) {
     // get planner_data from local storage
     const savedData = localStorage.getItem('plannerData');
     if (savedData) {
-        console.log("found");
         planner_data = JSON.parse(savedData);
-        console.log(planner_data);
     }
 
     const queryString = window.location.search;
@@ -52,9 +50,7 @@ function joinQueue (start, end) {
         }
     }
     localStorage.setItem('plannerData', JSON.stringify(planner_data));
-    console.log("hi");
     if (redirect) {
-        console.log("hi1");
         window.location.href = queue + timeslot + dateparam , '_blank';
     }
 

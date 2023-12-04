@@ -5,8 +5,8 @@ const planner_data_1 = [
         "day": "Mon",
         "date": "09",
         "events": [
-            { "start": "10:00", "end": "11:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "4:00", "end": "7:00", "sMer": "am", "eMer": "am", "added": "false", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "10:00", "end": "11:30", "sMer": "am", "eMer": "am", "added": "false", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "4:00", "end": "7:00", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
             { "start": "2:00", "end": "3:00", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
             { "start": "1:00", "end": "3:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
         ]
@@ -568,8 +568,10 @@ function eventClicked(e) {
         popup.remove()
         removeEventFromPlannerData(e, e.date);
         planner_data_1.forEach(day => {
-            day.events.forEach(e => {
-                e.added = "false";
+            day.events.forEach(ev => {
+                if (ev.title === e.title) {
+                    ev.added = "false";
+                }
             })
         });
         getEvents();
