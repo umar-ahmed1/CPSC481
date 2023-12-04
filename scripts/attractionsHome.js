@@ -28,6 +28,9 @@ function joinQueue (start, end) {
 
     let timeslot = "?timeslot=" + start
     timeslot += "&attraction=" + urlParams.get('attraction'); 
+    const getdate = document.getElementById("numberField").value;
+    date = getdate;
+    const dateparam = "&date=" + date;
     
     const foo = {"zipper": "The Zipper", "nashville-north": "Nashville North", "trick-riding": "Trick Riding", "show-home": "Show Home"};
     event_obj.title = foo[urlParams.get('attraction')];
@@ -52,7 +55,7 @@ function joinQueue (start, end) {
     console.log("hi");
     if (redirect) {
         console.log("hi1");
-        window.location.href = queue + timeslot, '_blank';
+        window.location.href = queue + timeslot + dateparam , '_blank';
     }
 
 }
@@ -90,6 +93,8 @@ function decrement() {
 function getQueues() {
     const getdate = document.getElementById("numberField").value;
     date = getdate;
+    const headerDate = document.getElementById('header-date');
+    headerDate.innerHTML = `July ${date}th`
 }
 
 function loadAttraction() {

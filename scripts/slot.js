@@ -6,6 +6,11 @@ function loadAttraction() {
     const urlParams = new URLSearchParams(queryString);
     let attraction = urlParams.get('attraction'); 
     let timeslot = urlParams.get('timeslot');
+    let date  = urlParams.get('date');
+
+    //get the data object
+    const timeDate = document.getElementById('time-date')
+    timeDate.innerHTML = `July ${date}th`
 
     // use the query params to get the data for the attraction 
     let targetAttraction = attractionData[attraction]; 
