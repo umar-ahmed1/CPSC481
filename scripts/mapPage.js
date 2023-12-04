@@ -9,7 +9,7 @@ function updateMapDiv(event) {
     // Set display to block
     mapDiv.style.display = "block";
     mapDiv.onclick = function () {
-      alert("Feature not implemented")
+      alert("This item does not have a page implemented")
     }
 
     // Update attraction-display-name with the title of the event
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const attractionsNoQueue = document.getElementsByClassName('attraction-highlight')
   Array.from(attractionsNoQueue).forEach((queue) => {
     queue.onclick = function () {
-      alert("Feature not implemented")
+      alert("This item does not have a page implemented")
     }
   });
   
