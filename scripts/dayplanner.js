@@ -5,10 +5,10 @@ const planner_data_1 = [
         "day": "Mon",
         "date": "09",
         "events": [
-            { "start": "10:00", "end": "11:30", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
-            { "start": "2:00", "end": "3:00", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
-            { "start": "1:00", "end": "3:30", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "4:00", "end": "7:00", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"}
+            { "start": "10:00", "end": "11:30", "sMer": "am", "eMer": "am", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
+            { "start": "2:00", "end": "3:00", "sMer": "pm", "eMer": "pm", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
+            { "start": "1:00", "end": "3:30", "sMer": "pm", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "4:00", "end": "7:00", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"}
         ]
     },
     // July 10 (Tuesday)
@@ -16,10 +16,10 @@ const planner_data_1 = [
         "day": "Tue",
         "date": "10",
         "events": [
-            { "start": "11:00", "end": "12:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     // July 11 (Wednesday)
@@ -27,10 +27,10 @@ const planner_data_1 = [
         "day": "Wed",
         "date": "11",
         "events": [
-            { "start": "11:30", "end": "1:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:30", "end": "1:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     // July 12 (Thursday)
@@ -38,10 +38,10 @@ const planner_data_1 = [
         "day": "Thurs",
         "date": "12",
         "events": [
-            { "start": "11:00", "end": "12:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     // July 13 (Friday)
@@ -49,60 +49,60 @@ const planner_data_1 = [
         "day": "Fri",
         "date": "13",
         "events": [
-            { "start": "11:00", "end": "12:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     {
         "day": "Sat",
         "date": "14",
         "events": [
-            { "start": "12:00", "end": "2:30", "title": "Pop Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "10:00", "end": "12:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "1:00", "end": "3:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "12:00", "end": "2:30", "sMer": "pm", "eMer": "pm", "title": "Pop Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "10:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "1:00", "end": "3:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     {
         "day": "Sun",
         "date": "15",
         "events": [
-            { "start": "11:00", "end": "12:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     {
         "day": "Mon",
         "date": "16",
         "events": [
-            { "start": "11:00", "end": "12:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     {
         "day": "Tue",
         "date": "17",
         "events": [
-            { "start": "11:00", "end": "12:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
     {
         "day": "Wed",
         "date": "18",
         "events": [
-            { "start": "11:00", "end": "12:00", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
+            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
+            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
+            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
+            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     }
 ];
@@ -163,7 +163,6 @@ function decrement() {
 }
 
 function change(button, date, event) {
-    console.log("change func");
     if (button.textContent === 'ADD') { // added an event
         button.style.width = '80px';
         button.textContent = 'REMOVE';
@@ -181,10 +180,7 @@ function change(button, date, event) {
         button.style.width = '50px';
         removeEventFromPlannerData(event, date);
     }
-    // redrawPlanner();
     update_planner()
-    console.log(planner_data);
-    // console.log(planner);
 }
 
 function createRodeoCard(event, date) {
@@ -199,7 +195,7 @@ function createRodeoCard(event, date) {
     eventCardName.innerHTML = `<span>Name: </span>${event.title}`;
     const eventCardTime = document.createElement('div');
     eventCardTime.className = 'event-card-time';
-    eventCardTime.innerHTML = `<span>Time: </span>${event.start} - ${event.end}`;
+    eventCardTime.innerHTML = `<span>Time: </span>${event.start}${event.sMer} - ${event.end}${event.eMer}`;
     const eventCardLoc = document.createElement('div');
     eventCardLoc.className = 'event-card-loc';
     eventCardLoc.innerHTML = `<span>Place: </span>${event.place}`;
@@ -232,7 +228,7 @@ function createConcertCard(event, date) {
     eventCardName.innerHTML = `<span>Name: </span>${event.title}`;
     const eventCardTime = document.createElement('div');
     eventCardTime.className = 'event-card-time';
-    eventCardTime.innerHTML = `<span>Time: </span>${event.start} - ${event.end}`;
+    eventCardTime.innerHTML = `<span>Time: </span>${event.start}${event.sMer} - ${event.end}${event.eMer}`;
     const eventCardLoc = document.createElement('div');
     eventCardLoc.className = 'event-card-loc';
     eventCardLoc.innerHTML = `<span>Place: </span>${event.place}`;
@@ -246,7 +242,6 @@ function createConcertCard(event, date) {
     button.textContent = 'ADD';
     button.className = 'event-card-btn';
     button.onclick = function() {
-        console.log("adding event", event.title);
         change(this, date, event);
     };
     eventCard.appendChild(eventCardInfo);
@@ -266,10 +261,11 @@ function getEvents() {
     let rodeoEvents = [];
     let concertEvents = [];
     events.forEach(event => {
+        let date = document.getElementById("numberField").value;
         if (event["event-type"] == "rodeo") {
-            rodeoEvents.push(createRodeoCard(event, document.getElementById("numberField").value));
+            rodeoEvents.push(createRodeoCard(event, date === "9" ? "09": date));
         } else if (event["event-type"] == "concert") {
-            concertEvents.push(createConcertCard(event, document.getElementById("numberField").value));
+            concertEvents.push(createConcertCard(event, date === "9" ? "09": date));
         }
     });
     if (rodeoEvents) {
@@ -352,18 +348,32 @@ let planner_data = [
     
 ]
 
+function timeToMinutes(time) {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;
+}
+
 function checkConflict(e1, date) {
     for (let index = 0; index < planner_data.length; index++) {
         let events = planner_data[index].events;
-        if (planner_data[index].date == date) {
+        if (planner_data[index].date === date) {
             for (let i = 0; i < events.length; i++) {
-                if (events[i].start == e1.start || events[i].end == e1.end) {
-                    return true;
+                let e2 = events[i];
+
+                // Convert times to minutes for easier comparison
+                let e1StartMinutes = timeToMinutes(e1.start);
+                let e1EndMinutes = timeToMinutes(e1.end);
+                let e2StartMinutes = timeToMinutes(e2.start);
+                let e2EndMinutes = timeToMinutes(e2.end);
+
+                // Check for overlap
+                if (e1StartMinutes < e2EndMinutes && e1EndMinutes > e2StartMinutes) {
+                    return true; // Conflict detected
                 }
             }
         }
     }
-    return false;
+    return false; // No conflict
 }
 
 function addEventToPlannerData(eventToAdd, date) {
@@ -378,7 +388,6 @@ function addEventToPlannerData(eventToAdd, date) {
             }
         }
     }
-    // console.log(planner_data);
     update_planner();
 }
 
@@ -435,14 +444,16 @@ function update_planner(filteredData = planner_data) {
             let startSlot = (startHour - 10) * 2 + (startMinutes >= 30 ? 1 : 0);
             let endSlot = (endHour - 10) * 2 + (endMinutes >= 30 ? 1 : 0);
             let duration = endSlot - startSlot;
+            let sMer = startHour < 12 ? "am" : "pm"; 
+            let eMer = endHour < 12 ? "am" : "pm"; 
 
             // Fill the planner array with event data
             if (startSlot < rows && col < cols) {
                 planner[startSlot][col] = {
                     title: event.title,
                     date: dayData.date,
-                    start: event.start,
-                    end: event.end,
+                    start: event.start + sMer,
+                    end: event.end + eMer,
                     place: event.place,
                     styles: {
                         "eventType": event["event-type"],
