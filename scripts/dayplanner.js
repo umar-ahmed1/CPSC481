@@ -8,7 +8,7 @@ const planner_data_1 = [
             { "start": "10:00", "end": "11:30", "title": "Calf Roping Competition", "event-type": "rodeo", "place": "Agriculture Building","map":"agriculture"},
             { "start": "2:00", "end": "3:00", "title": "Lasso Challenge", "event-type": "rodeo", "place": "Western Field","map":"northern" },
             { "start": "1:00", "end": "3:30", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "4:00", "end": "7:00", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"}
+            { "start": "4:00", "end": "7:00", "title": "Afternoon Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"}
         ]
     },
     // July 10 (Tuesday)

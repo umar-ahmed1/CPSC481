@@ -106,18 +106,16 @@ function redirect(param) {
 }
 
 function toggleVisibility(display) {
-  monsterEnergy = document.getElementById("monsterEnergy");
-  monsterEnergy.style.display = display;
+  //get all the items and then show them all or hide them all for attractions with a queue
+  const attractionsQueue = document.getElementsByClassName('attraction-highlight-queue')
+  Array.from(attractionsQueue).forEach((queue) => {
+    queue.style.display = display;
+  });
 
-  zipper = document.getElementById("zipper");
-  zipper.style.display = display;
-
-  nashvilleNorth = document.getElementById("nashvilleNorth");
-  nashvilleNorth.style.display = display;
-
-  showHome = document.getElementById("showHome");
-  showHome.style.display = display;
-
+  const attractionsNoQueue = document.getElementsByClassName('attraction-highlight')
+  Array.from(attractionsNoQueue).forEach((queue) => {
+    queue.style.display = display;
+  });
 
 
   selector = document.getElementsByClassName("checkbox"); 
