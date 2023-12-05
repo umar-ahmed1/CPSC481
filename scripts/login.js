@@ -13,8 +13,10 @@ function loginUser(event) {
     const user = users.find(u => u.email === email && u.password === password);
 
     //If user details correct, store the logged in user and redirect to landing page
+    //also set the plannerData in local storage to the users plannerdata
     if (user) {
         localStorage.setItem('loggedInUser', JSON.stringify(user));
+        localStorage.setItem('plannerData',JSON.stringify(user.plannerData))
         window.location.href = '../';
     // Display an error message
     } else {

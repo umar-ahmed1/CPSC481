@@ -26,7 +26,8 @@ function registerUser(event) {
     const user = {
         name: name,
         email: email,
-        password: password
+        password: password,
+        plannerData : [],
     };
 
     // Get existing users from local storage
@@ -37,6 +38,7 @@ function registerUser(event) {
 
     // Store updated user array in local storage
     localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('loggedInUser',JSON.stringify(user))
     console.log('User registered:', user);
 
     // Redirect the user
