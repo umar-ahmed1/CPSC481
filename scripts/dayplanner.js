@@ -108,9 +108,16 @@ const planner_data_1 = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    const savedData = localStorage.getItem('plannerData');
-    if (savedData) {
-        planner_data = JSON.parse(savedData);
+    const userSavedData = localStorage.getItem('userPlannerData')
+    const uSavedData = JSON.parse(userSavedData)
+    if (uSavedData.length !== 0){
+        planner_data = uSavedData
+        console.log("here")
+    } else{
+        const savedData = localStorage.getItem('plannerData');
+        if (savedData) {
+            planner_data = JSON.parse(savedData);
+        }
     }
     update_planner();
 

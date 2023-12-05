@@ -50,7 +50,7 @@ logoutButton.onclick = function () {
     // Store updated user array in local storage
     localStorage.setItem('users', JSON.stringify(users));
     //also reset the planner data
-    localStorage.setItem('plannerData',JSON.stringify([]))
+    localStorage.setItem('userPlannerData',JSON.stringify([]))
     //remove the logged in user and put the page to the landing page
     localStorage.removeItem('loggedInUser');
     window.location.href = "";

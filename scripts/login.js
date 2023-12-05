@@ -16,7 +16,7 @@ function loginUser(event) {
     //also set the plannerData in local storage to the users plannerdata
     if (user) {
         localStorage.setItem('loggedInUser', JSON.stringify(user));
-        localStorage.setItem('plannerData',JSON.stringify(user.plannerData))
+        localStorage.setItem('userPlannerData',JSON.stringify(user.plannerData))
         window.location.href = '../';
     // Display an error message
     } else {
