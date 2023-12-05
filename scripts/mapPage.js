@@ -3,13 +3,20 @@
 // Function to update the map div based on the event
 function updateMapDiv(event) {
   const mapDiv = document.getElementById(event.map);
+  console.log(event.title)
 
   // Check if the map div exists
   if (mapDiv) {
     // Set display to block
     mapDiv.style.display = "block";
-    mapDiv.onclick = function () {
-      alert("This item does not have a page implemented")
+
+    //array of title for queue
+    const queueTitles = ["Trick Riding", "The Zipper", "Show Home Tour", "Nashville North"];
+    //if not a queue event then no page implemented
+    if (!queueTitles.includes(event.title)){
+      mapDiv.onclick = function () {
+        alert("This item does not have a page implemented")
+      }
     }
 
     // Update attraction-display-name with the title of the event
