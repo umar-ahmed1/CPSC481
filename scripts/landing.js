@@ -37,7 +37,21 @@ const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 const logoutButton = document.getElementById("logout");
 
 //set the logout button onclick to sign out by removing loggedinuser and redirecting to main page
+//also wanna update the plannerData
+//when we login we update the planner data
 logoutButton.onclick = function () {
+    const plannerData = JSON.parse(localStorage.getItem('plannerData'));
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    const email = loggedInUser.email
+    //get all the users and the logged in user from that array of users
+    const users = JSON.parse(localStorage.getItem('users'));
+    const arrayUser = users.find(user => user.email === email)
+    arrayUser.plannerData = plannerData
+    // Store updated user array in local storage
+    localStorage.setItem('users', JSON.stringify(users));
+    //also reset the planner data
+    localStorage.setItem('userPlannerData',JSON.stringify([]))
+    //remove the logged in user and put the page to the landing page
     localStorage.removeItem('loggedInUser');
     window.location.href = "";
 }
