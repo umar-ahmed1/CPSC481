@@ -30,8 +30,12 @@ function joinQueue (start, end) {
     date = getdate;
     const dateparam = "&date=" + date;
     
-    const foo = {"zipper": "The Zipper", "nashville-north": "Nashville North", "trick-riding": "Trick Riding", "show-home": "Show Home"};
+    const foo = {"zipper": "The Zipper", "nashville-north": "Nashville North", "trick-riding": "Trick Riding", "show-home": "Show Home Tour"};
+    const mapLoc = {"zipper": "zipper", "nashville-north": "nashvilleNorth", "trick-riding": "monsterEnergy", "show-home": "showHome"};
+    const placeName = {"zipper": "The Zipper", "nashville-north": "Nashville North", "trick-riding": "Monster Energy Compound", "show-home": "Show Home"};
     event_obj.title = foo[urlParams.get('attraction')];
+    event_obj.map = mapLoc[urlParams.get("attraction")];
+    event_obj.place = placeName[urlParams.get("attraction")];
     event_obj.start = start;
     event_obj.end = end;
     
