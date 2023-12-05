@@ -532,6 +532,23 @@ function eventClicked(e) {
     popup.className = 'event-popup'; // Add a class for styling
     //if invalid then return
     if(!e.start) return;
+    console.log(e)
+    
+    //if the event is a queue we will also add a view slot button
+    const slotButton = document.createElement('button');
+    slotButton.textContent = 'View Slot';
+    slotButton.className = 'event-popup-btn';
+    slotButton.onclick = function() {
+        const foo = {"The Zipper":"zipper","Nashville North": "nashville-north","Trick Riding": "trick-riding","Show Home":"show-home"};
+        const queue = "slot.html";
+        let timeslot = "?timeslot=" + e.start.replace(/\s?[ap]m/i, "");
+        timeslot += "&attraction=" + foo[e.title];
+        const date = e.date;
+        const dateparam = "&date=" + date;
+        window.location.href = queue + timeslot + dateparam , '_blank';
+    };
+    slotButton.style.width = "75%";
+    slotButton.style.marginTop = "10px";
 
     const eventPopupInfo = document.createElement('div');
     eventPopupInfo.className = 'event-popup-info';
@@ -549,9 +566,17 @@ function eventClicked(e) {
     eventPopupInfo.appendChild(eventPopupName);
     eventPopupInfo.appendChild(eventPopupTime);
     eventPopupInfo.appendChild(eventPopupLoc);
+    //if its a queue add the slotButton
+    if (e.styles.eventType === "queue"){
+        eventPopupInfo.appendChild(slotButton)
+    }
 
     const btnFlex = document.createElement('div');
     btnFlex.className = 'btn-flex';
+    popup.style.display = "flex";
+    popup.style.flexDirection = "column";
+    popup.style.alignItems = "flex-start";
+    popup.style.justifyContent = "center";
 
     // Add a close button to the popup
     const closeButton = document.createElement('button');
