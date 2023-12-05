@@ -110,7 +110,7 @@ const planner_data_1 = [
 document.addEventListener('DOMContentLoaded', () => {
     const userSavedData = localStorage.getItem('userPlannerData')
     const uSavedData = JSON.parse(userSavedData)
-    if (uSavedData.length !== 0){
+    if (uSavedData && uSavedData.length !== 0){
         planner_data = uSavedData
         console.log("here")
     } else{
