@@ -55,56 +55,6 @@ const planner_data_1 = [
             { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
         ]
     },
-    {
-        "day": "Sat",
-        "date": "14",
-        "events": [
-            { "start": "12:00", "end": "2:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Pop Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "10:00", "end": "12:00", "sMer": "am", "eMer": "pm", "added": "false", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "1:00", "end": "3:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
-        ]
-    },
-    {
-        "day": "Sun",
-        "date": "15",
-        "events": [
-            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "added": "false", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
-        ]
-    },
-    {
-        "day": "Mon",
-        "date": "16",
-        "events": [
-            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "added": "false", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
-        ]
-    },
-    {
-        "day": "Tue",
-        "date": "17",
-        "events": [
-            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "added": "false", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
-        ]
-    },
-    {
-        "day": "Wed",
-        "date": "18",
-        "events": [
-            { "start": "11:00", "end": "12:00", "sMer": "am", "eMer": "pm", "added": "false", "title": "Pop Power Hour", "event-type": "concert", "place": "Pop Stage","map":"coca"},
-            { "start": "12:30", "end": "1:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Morning Jazz", "event-type": "concert", "place": "Fun Zone","map":"saddledome"},
-            { "start": "2:00", "end": "4:00", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Bull Riding Showdown", "event-type": "rodeo", "place": "Rodeo Ring","map":"infield"},
-            { "start": "5:00", "end": "6:30", "sMer": "pm", "eMer": "pm", "added": "false", "title": "Wild Horse Taming", "event-type": "rodeo", "place": "Dusty Arena","map":"trailblazer" }
-        ]
-    }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -339,34 +289,8 @@ let planner_data = [
         "day": "Fri",
         "date": "13",
         "events": []
-    },
-    {
-        "day": "Sat",
-        "date": "14",
-        "events": []
-    },
-    {
-        "day": "Sun",
-        "date": "15",
-        "events": []
-    },
-    {
-        "day": "Mon",
-        "date": "16",
-        "events": []
-    },
-    {
-        "day": "Tue",
-        "date": "17",
-        "events": []
-    },
-    {
-        "day": "Wed",
-        "date": "18",
-        "events": []
     }
-    
-]
+];
 
 function timeToMinutes(time) {
     const [hours, minutes] = time.split(':').map(Number);
@@ -422,7 +346,7 @@ function removeEventFromPlannerData(eventToRemove, date) {
 
 
 let rows = 11 * 2; // 11 slots, each representing 30 minutes
-let cols = 11;
+let cols = 6;
 let planner = new Array(rows);
 
 
@@ -447,7 +371,7 @@ function update_planner(filteredData = planner_data) {
         }
     }
 
-    let date_conversion = {"09": "1", "10": "2", "11": "3", "12": "4", "13": "5", "14": "6", "15": "7", "16": "8", "17": "9", "18": "10"};
+    let date_conversion = {"09": "1", "10": "2", "11": "3", "12": "4", "13": "5"};
     
     filteredData.forEach(dayData => {
         const col = date_conversion[dayData.date];
@@ -519,8 +443,8 @@ function createTBodyFromArray(array, tableId) {
                 if (cell.styles.fontSize) {
                     td.style.fontSize = cell.styles.fontSize;
                 }
-                td.addEventListener('click', () => {
-                    eventClicked(cell);
+                td.addEventListener('click', (clickEvent) => {
+                    eventClicked(cell, clickEvent);
                 });
                 tr.appendChild(td);
             }
@@ -532,10 +456,29 @@ function createTBodyFromArray(array, tableId) {
     table.appendChild(tbody);
 }
 
-function eventClicked(e) {
+function eventClicked(e, clickEvent) {
     // Create the popup element
     const popup = document.createElement('div');
     popup.className = 'event-popup'; // Add a class for styling
+    const rect = clickEvent.target.getBoundingClientRect();
+    let topPosition;
+    let leftPosition;
+    if (e.date == "09" || e.date == "10" || e.date == "11") {
+        topPosition = rect.top + rect.height/3; 
+        leftPosition = rect.left + rect.width/3;
+    }
+    if (e.date == "12") {
+        topPosition = rect.top + rect.height; 
+        leftPosition = rect.left - rect.width/2;
+    }
+    if (e.date == "13") {
+        topPosition = rect.top + rect.height; 
+        leftPosition = rect.left - rect.width/2;
+    }
+    const buffer = 10; // Buffer space from edges
+    const adjustedLeft = Math.min(leftPosition, window.innerWidth - popup.offsetWidth - buffer);
+    const adjustedTop = Math.min(topPosition, window.innerHeight - popup.offsetHeight - buffer);
+
     //if invalid then return
     if(!e.start) return;
     console.log(e)
@@ -617,10 +560,9 @@ function eventClicked(e) {
     document.body.appendChild(popup);
 
     // Style the popup 
-    popup.style.position = 'fixed';
-    popup.style.top = '50%';
-    popup.style.left = '50%';
-    popup.style.transform = 'translate(-50%, -50%)';
+    popup.style.position = 'absolute';
+    popup.style.left = `${adjustedLeft}px`;
+    popup.style.top = `${adjustedTop}px`;
     popup.style.backgroundColor = 'white';
     popup.style.padding = '20px';
     popup.style.border = '1px solid black';
@@ -753,3 +695,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 })
+
+
+function week2() {
+    var popup = window.alert("This feature has not been implemented yet.");
+
+    
+}

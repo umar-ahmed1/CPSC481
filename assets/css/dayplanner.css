@@ -227,12 +227,12 @@ span {
 }
 
 
-.add-btn, .join-queue-btn {
+.add-btn, .join-queue-btn, #clear-button {
     margin-top: 20px;
     width:200px;
     height: 95px;
     background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
@@ -242,7 +242,7 @@ span {
 .side {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .filter {
@@ -301,24 +301,16 @@ span {
 .page {
     width:30%;
     margin-top: 20px;
-    margin-left:55%;
-    margin-right:40%;
+    margin-left:45%;
+    /* margin-right:10%; */
+    gap: 100px;
     font-size: 20px;
     font-weight: bold;
     display:flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: center;
 }
 
-.page button{
-    height: 40px;
-    padding: 0% 1%;
-    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
 .lt {
     opacity: 0.4;

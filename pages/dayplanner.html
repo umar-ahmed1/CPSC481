@@ -15,10 +15,10 @@
                 <div class="title">DAY PLANNER</div>
             </div>
             <div class="page">
-                <button id="clear-button">Clear Schedule</button>
-                <!-- <div>
-                    <span class="lt">&lt;</span>&nbsp;&nbsp;Week 1&nbsp;&nbsp;<span class="gt">&gt;</span>
-                </div> -->
+                <!-- <button id="clear-button">Clear Schedule</button> -->
+                <div class="page-no">
+                    <span class="lt">&lt;</span>&nbsp;&nbsp;Week 1&nbsp;&nbsp;<span onclick="week2()" class="gt">&gt;</span>
+                </div>
             </div>
             <div class="main">
                 <div id="add-menu">
@@ -40,6 +40,7 @@
                 </div>
                 <div class="side">
                     <button onclick="addMenu()" class="add-btn">Add Event</button>
+                    <button id="clear-button">Clear Schedule</button>
                     <button onclick="redirectToAttractions()" class="join-queue-btn">Join A Queue</button>
                     <div class="filter">
                         <span class="f">Filter:</span>
@@ -107,46 +108,6 @@
                                             Fri<br>July 13
                                         </div>
                                         <img class="schedule-to-map" data-arg="13" src="../assets/images/scheduletomapicongif.png" />
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="cal-header">
-                                        <div style="text-align: center; width: 70%;">
-                                            Sat<br>July 14
-                                        </div>
-                                        <img class="schedule-to-map" data-arg="14" src="../assets/images/scheduletomapicongif.png" />
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="cal-header">
-                                        <div style="text-align: center; width: 70%;">
-                                            Sun<br>July 15
-                                        </div>
-                                        <img class="schedule-to-map" data-arg="15" src="../assets/images/scheduletomapicongif.png" />
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="cal-header">
-                                        <div style="text-align: center; width: 70%;">
-                                            Mon<br>July 16
-                                        </div>
-                                        <img class="schedule-to-map" data-arg="16" src="../assets/images/scheduletomapicongif.png" />
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="cal-header">
-                                        <div style="text-align: center; width: 70%;">
-                                            Tue<br>July 17
-                                        </div>
-                                        <img class="schedule-to-map" data-arg="17" src="../assets/images/scheduletomapicongif.png" />
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="cal-header">
-                                        <div style="text-align: center; width: 70%;">
-                                            Wed<br>July 18
-                                        </div>
-                                        <img class="schedule-to-map" data-arg="18" src="../assets/images/scheduletomapicongif.png" />
                                     </div>
                                 </th>
                             </tr>
