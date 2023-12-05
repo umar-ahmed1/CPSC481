@@ -32,7 +32,7 @@ All of the user's scheduled events will show up here.
 - Feature #3
 
 ### Virtual Queue
-**short desc**
-- Feature #1
-- Feature #2
-- Feature #3
+This is where you can join virtual queues for various attractions. **Note: Due to time constraints, only functionality for the following is implemented: Trick Riding, Nashville North, Show home tour, The Zipper.**
+- Use the search bar to find attractions.
+- Click on one of the above attractions, choose a date and timeslot and join the virtual queue. You can save the unique QR code or send it your phone and show it to the ride operator when its your turn.
+- View the attraction in your schedule using the **View Schedule** button or leave the queue using the **Leave Queue** button.
