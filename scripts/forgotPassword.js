@@ -21,11 +21,11 @@ function resetPassword(event) {
 
     //If user details correct, store the logged in user and redirect to landing page
     if (user) {
-        //update the password
-        user.password = password;
-        // Update the users' list in local storage
-        localStorage.setItem('users', JSON.stringify(users));
-        window.location.href = '../';
+        // Display a confirmation alert
+        const confirmation = window.confirm('Confirmation email sent. Click OK to redirect to home.');
+        if (confirmation){
+            window.location.href = '../';
+        }
     // Display an error message
     } else {
         alert('Email Not Found. Please try again.');
@@ -45,4 +45,14 @@ cancelButton.onclick = function () {
 const forgotPassword = document.getElementById('forgot-password')
 forgotPassword.onclick = function () {
     window.location.href = 'forgot-password.html'
+}
+
+//stub for confirming confirmation email for reset password
+const confirmationEmailCheck = () => {
+
+}
+
+//stub for actually resetting the password after email confirmed
+const confirmResetPassword = () => {
+
 }
