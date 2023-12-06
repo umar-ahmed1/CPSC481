@@ -121,7 +121,7 @@ zoom(-4.5);
 function redirect(param) {
   const attractionsHome = 'attractions-home.html'
   let search = "?attraction=" + param
-  window.open(attractionsHome + search, '_blank');
+  window.location.href = attractionsHome + search, '_blank';
 }
 
 function toggleVisibility(display) {
