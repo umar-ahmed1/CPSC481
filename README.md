@@ -16,6 +16,28 @@ Welcome to MyStampede, where you can navigate the Stampede with ease and comfort
 - **Virtual Queue**: Skip the physical wait in lines by joining a virtual queue for events. Upon joining, you get a unique QR code to verify your position in the queue, and can leave the queue at any time.
 - **Interactive Map**: Find the locations of your scheudled events using the interactive map of the Stampede.
 - **Day Planner**: Access all of your scheduled events in one place. Add, remove and view events on your personalized day planner.
+- **Register/Login**: Create an account and login to save your day planner schedule.
+
+### Register/Login
+**Register Page**
+- By registering an account, the next time you logout, your day planner schedule will be saved to your account and the planner will be reset. If you log back in, that same schedule that was saved will re-appear.
+
+- To register click on the register button on the landing page. This will take you to the register page
+- Fill in all the required fields and click the register button. You can click the cancel button to back out
+- If all fields are valid, then you will be taken back to the home page and a "sign out" button will appear instead. Click this to logout if needed.
+- If all fields are not valid, an error alert will be displayed on your screen telling you which field is incorrect/not filled.
+
+**Login Page**
+- If you have signed out and try to log back in using the login page, your saved day planner will be loaded.
+
+- To login click on the login button on the landing page. This will take you to the login page.
+- Fill in all the required fields and click the login button. You can click the cancel button to back out
+- If all fields are valid you will be logged in and taken back to the home page, a "sign out" button will appear instead. Click this to logout if needed.
+- If all fields are not valid, an error alert will be displayed on your screen telling you which field is incorrect/not filled.
+**Forgot Password/Reset Email**
+- If you have forgotton your password or your email, go to the login page and click the forgot password or reset email button.
+- For forgot password, you will be prompted to enter your email and a new password. If everything is correct, a confirmation email will be sent to you. **Note: since we have no backend we can't actually send confirmation emails to users, therefore the functionality is a stub**
+- For forgot email, the feature was not implemented for similar reasons to forgot password, so an alert will be displayed when this is clicked
 
 ### Day Planner
 All of the user's scheduled events will show up here.
