@@ -65,7 +65,7 @@ body {
 }
 
 #add-menu {
-    width: 550px;
+    width: 450px;
     height: 400px;
     left: 50px;
     background-color: #FFF6EA;
@@ -181,7 +181,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
+    width: 80%;
     margin: auto;
     margin-left: 12px;
     margin-bottom: 20px;
