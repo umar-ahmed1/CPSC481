@@ -513,7 +513,7 @@ function eventClicked(e, clickEvent) {
         const dateparam = "&date=" + date;
         window.location.href = queue + timeslot + dateparam , '_blank';
     };
-    slotButton.style.width = "75%";
+    slotButton.style.width = "95%";
     slotButton.style.marginTop = "10px";
 
     const eventPopupInfo = document.createElement('div');
@@ -539,6 +539,7 @@ function eventClicked(e, clickEvent) {
 
     const btnFlex = document.createElement('div');
     btnFlex.className = 'btn-flex';
+    btnFlex.style.width="100%";
     popup.style.display = "flex";
     popup.style.flexDirection = "column";
     popup.style.alignItems = "flex-start";
@@ -548,6 +549,7 @@ function eventClicked(e, clickEvent) {
     const closeButton = document.createElement('button');
     closeButton.textContent = 'Close';
     closeButton.className = 'event-popup-btn';
+    closeButton.style.width = "45%";
     closeButton.onclick = function() {
         popup.remove();
     };
@@ -555,6 +557,7 @@ function eventClicked(e, clickEvent) {
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.className = 'event-popup-btn';
+    removeButton.style.width = "45%";
     removeButton.onclick = function() {
         popup.remove()
         removeEventFromPlannerData(e, e.date);
