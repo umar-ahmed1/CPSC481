@@ -71,6 +71,7 @@ body,html{
     font-weight: 700;
     font-size:30px;
     z-index:1;
+    color:black;
 }
 
 .register-button:hover,.login-button:hover,.logout-button:hover{
@@ -100,6 +101,7 @@ body,html{
     background-color: #f9efe2;
     font-size:40px;
     font-weight: 700;
+    color:black;
     text-align: center;
 }
 
