@@ -27,10 +27,12 @@ All of the user's scheduled events will show up here.
 - You can view the locations of your events on an interactive map for each day. Click on the map icon beside the date, which will redirect you to the map page and outline the location, along with the title, of each event you have scheduled for that day.
 
 ### Interactive Map
-**short desc**
-- Feature #1
-- Feature #2
-- Feature #3
+The interactive map is a map of the Stampede that can be scrolled up/down, can be zoomed in/out, and has dynamic elements on it to showcase to the user where various stampede concerts, attractions, etc. are. 
+- There is a sidebar which has various categories such as concerts, rides, exhibitions, rodeos. Clicking on a category opens a dropdown menu where you can select various events in the category. These events will then show up on the interactive map as an orange highlight box that is clickable and will redirect you to the attractions page for the event. You can then join a queue for the event from the attractions page and view that on the day planner and the map (instructions for this are under the day planner heading). **Note: Due to time constraints, only functionality for the following is implemented: Trick Riding, Nashville North, Show home tour, The Zipper. The other events will show a popup stating that the attraction page for them is not implemented**.
+- There is a "Show All" and "Hide All" button that will add all events to the map or remove all events from the map
+- You can zoom in and out on the map to see more/less by clicking the "+" or "-" buttons on the top left of the map
+- You can hide the sidebar so you can see the map more clearly by clicking the "Hide Sidebar" button on the top left of the map
+
 
 ### Virtual Queue
 This is where you can join virtual queues for various attractions. **Note: Due to time constraints, only functionality for the following is implemented: Trick Riding, Nashville North, Show home tour, The Zipper.**
