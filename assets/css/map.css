@@ -136,6 +136,7 @@ ul {
     width: 100%;
     background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
     font-weight: 700;
+    color:black;
 }
 
 .toggle:hover,.zoom:hover{
@@ -148,6 +149,7 @@ ul {
     height: 30%;
     width: 40%;
     background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    color:black;
 }
 
 .map-div {

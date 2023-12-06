@@ -21,7 +21,7 @@ export const attractionData = {
         "image": '../assets/images/nashville.jpg'
     },
     "show-home": {
-        "title": "Dream Home Tour", 
+        "title": "Show Home Tour", 
         "description": "Experience the epitome of luxury in our stunning show home. Immerse yourself in impeccable design, spacious " +
                        "living, and exquisite details that define modern comfort and style. This showcase of beauty and innovation " +
                        "offers a glimpse into your dream lifestyle.", 

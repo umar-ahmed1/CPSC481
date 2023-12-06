@@ -60,8 +60,25 @@ const planner_data_1 = [
 document.addEventListener('DOMContentLoaded', () => {
     const userSavedData = localStorage.getItem('userPlannerData')
     const uSavedData = JSON.parse(userSavedData)
+    //if a user has just logged out
+    const userLoggedOutRecently = JSON.parse(localStorage.getItem('justLoggedOut'))
+    console.log(userLoggedOutRecently)
+    if (userLoggedOutRecently){
+        planner_data.forEach(day => {
+            day.events = [];
+        });
+        planner_data_1.forEach(day => {
+            day.events.forEach(e => {
+                e.added = "false";
+            })
+        });
+        getEvents()
+        update_planner()
+    }
+    localStorage.removeItem('justLoggedOut')
     if (uSavedData && uSavedData.length !== 0){
         planner_data = uSavedData
+        localStorage.removeItem('userPlannerData')
     } else{
         const savedData = localStorage.getItem('plannerData');
         if (savedData) {
@@ -488,7 +505,7 @@ function eventClicked(e, clickEvent) {
     slotButton.textContent = 'View Slot';
     slotButton.className = 'event-popup-btn';
     slotButton.onclick = function() {
-        const foo = {"The Zipper":"zipper","Nashville North": "nashville-north","Trick Riding": "trick-riding","Show Home":"show-home"};
+        const foo = {"The Zipper":"zipper","Nashville North": "nashville-north","Trick Riding": "trick-riding","Show Home Tour":"show-home"};
         const queue = "slot.html";
         let timeslot = "?timeslot=" + e.start.replace(/\s?[ap]m/i, "");
         timeslot += "&attraction=" + foo[e.title];
@@ -496,7 +513,7 @@ function eventClicked(e, clickEvent) {
         const dateparam = "&date=" + date;
         window.location.href = queue + timeslot + dateparam , '_blank';
     };
-    slotButton.style.width = "75%";
+    slotButton.style.width = "95%";
     slotButton.style.marginTop = "10px";
 
     const eventPopupInfo = document.createElement('div');
@@ -522,6 +539,7 @@ function eventClicked(e, clickEvent) {
 
     const btnFlex = document.createElement('div');
     btnFlex.className = 'btn-flex';
+    btnFlex.style.width="100%";
     popup.style.display = "flex";
     popup.style.flexDirection = "column";
     popup.style.alignItems = "flex-start";
@@ -531,6 +549,7 @@ function eventClicked(e, clickEvent) {
     const closeButton = document.createElement('button');
     closeButton.textContent = 'Close';
     closeButton.className = 'event-popup-btn';
+    closeButton.style.width = "45%";
     closeButton.onclick = function() {
         popup.remove();
     };
@@ -538,6 +557,7 @@ function eventClicked(e, clickEvent) {
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.className = 'event-popup-btn';
+    removeButton.style.width = "45%";
     removeButton.onclick = function() {
         popup.remove()
         removeEventFromPlannerData(e, e.date);

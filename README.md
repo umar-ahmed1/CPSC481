@@ -16,6 +16,29 @@ Welcome to MyStampede, where you can navigate the Stampede with ease and comfort
 - **Virtual Queue**: Skip the physical wait in lines by joining a virtual queue for events. Upon joining, you get a unique QR code to verify your position in the queue, and can leave the queue at any time.
 - **Interactive Map**: Find the locations of your scheudled events using the interactive map of the Stampede.
 - **Day Planner**: Access all of your scheduled events in one place. Add, remove and view events on your personalized day planner.
+- **Register/Login**: Create an account and login to save your day planner schedule.
+
+### Register/Login
+**Register Page**
+- By registering an account, the next time you logout, your day planner schedule will be saved to your account and the planner will be reset. If you log back in, that same schedule that was saved will re-appear.
+
+- To register click on the register button on the landing page. This will take you to the register page
+- Fill in all the required fields and click the register button. You can click the cancel button to back out
+- If all fields are valid, then you will be taken back to the home page and a "sign out" button will appear instead. Click this to logout if needed.
+- If all fields are not valid, an error alert will be displayed on your screen telling you which field is incorrect/not filled.
+
+**Login Page**
+- If you have signed out and try to log back in using the login page, your saved day planner will be loaded.
+
+- To login click on the login button on the landing page. This will take you to the login page.
+- Fill in all the required fields and click the login button. You can click the cancel button to back out
+- If all fields are valid you will be logged in and taken back to the home page, a "sign out" button will appear instead. Click this to logout if needed.
+- If all fields are not valid, an error alert will be displayed on your screen telling you which field is incorrect/not filled.
+
+**Forgot Password/Reset Email**
+- If you have forgotton your password or your email, go to the login page and click the forgot password or reset email button.
+- For forgot password, you will be prompted to enter your email and a new password. If everything is correct, a confirmation email will be sent to you. **Note: since we have no backend we can't actually send confirmation emails to users, therefore the functionality is a stub**
+- For forgot email, the feature was not implemented for similar reasons to forgot password, so an alert will be displayed when this is clicked
 
 ### Day Planner
 All of the user's scheduled events will show up here.
@@ -27,10 +50,14 @@ All of the user's scheduled events will show up here.
 - You can view the locations of your events on an interactive map for each day. Click on the map icon beside the date, which will redirect you to the map page and outline the location, along with the title, of each event you have scheduled for that day.
 
 ### Interactive Map
-**short desc**
-- Feature #1
-- Feature #2
-- Feature #3
+The interactive map is a map of the Stampede that can be scrolled up/down, can be zoomed in/out, and has dynamic elements on it to showcase to the user where various stampede concerts, attractions, etc. are. 
+- There is a sidebar which has various categories such as concerts, rides, exhibitions, rodeos. Clicking on a category opens a dropdown menu where you can select various events in the category. To select an event, simply click on the checkbox beside its name and an arrow will appear showing you it is "checked".
+- Checked events will show up on the interactive map as an orange highlight box that is clickable and will redirect you to the attractions page for the event. You can then join a queue for the event from the attractions page and view that on the day planner and the map (instructions for this are under the day planner heading). 
+- **Note: Due to time constraints, only functionality for the following is implemented: Trick Riding, Nashville North, Show home tour, The Zipper. The other events will show a popup stating that the attraction page for them is not implemented**.
+- There is a "Show All" and "Hide All" button that will add all events to the map or remove all events from the map
+- You can zoom in and out on the map to see more/less by clicking the "+" or "-" buttons on the top left of the map
+- You can hide the sidebar so you can see the map more clearly by clicking the "Hide Sidebar" button on the top left of the map
+
 
 ### Virtual Queue
 This is where you can join virtual queues for various attractions. **Note: Due to time constraints, only functionality for the following is implemented: Trick Riding, Nashville North, Show home tour, The Zipper.**

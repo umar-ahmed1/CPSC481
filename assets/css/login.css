@@ -115,6 +115,7 @@ body {
     font-size: 17px;
     font-weight: bold;
     text-decoration: underline;
+    color:black;
 }
 
 .forgot:hover{
@@ -134,6 +135,7 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
+    color:black;
 }
 
 .submit-btn{
@@ -141,6 +143,7 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
+    color:black;
 }
 
 .cancel-btn button{
@@ -150,6 +153,7 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+    color:black;
 }
 .submit-btn input[type="submit"] {
     width:50%;
@@ -158,6 +162,7 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+    color:black;
 }
 
 .cancel-btn button:hover{

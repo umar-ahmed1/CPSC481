@@ -110,6 +110,7 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
+    color:black;
 }
 
 .cancel-btn button{
@@ -119,6 +120,7 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+    color:black;
 }
 .submit-btn input[type="submit"] {
     width: 200px;
@@ -127,6 +129,7 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+    color:black;
 }
 
 .cancel-btn input[type="submit"] {
@@ -136,6 +139,7 @@ body {
     font-size: 25px;
     font-weight: bold;
     border-radius: 25px;
+    color:black;
 }
 
 .submit-btn input:hover[type="submit"] {
