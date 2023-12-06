@@ -149,8 +149,6 @@ function eventInPlanner(e) {
 
 function change(button, date, event) {
     if (event.added === "false") { // added an event
-        event.added = "true";
-        button.textContent = 'REMOVE';
         let event_obj = {
             "start": event.start,
             "end": event.end,
@@ -159,7 +157,11 @@ function change(button, date, event) {
             "place": event.place,
             "map":event.map,
         }
-        addEventToPlannerData(event_obj, date);
+        let successfullyAdded = addEventToPlannerData(event_obj, date);
+        if (successfullyAdded) {
+            event.added = "true";
+            button.textContent = 'REMOVE';
+        }
     } else { // removed an event
         event.added = "false";
         button.textContent = 'ADD';
@@ -326,7 +328,10 @@ function checkConflict(e1, date) {
                 let e1EndMinutes = timeToMinutes(e1.end);
                 let e2StartMinutes = timeToMinutes(e2.start);
                 let e2EndMinutes = timeToMinutes(e2.end);
-
+                
+                if (e1.start === e2.start || e1.end === e2.end) {
+                    return true;
+                }
                 // Check for overlap
                 if (e1StartMinutes < e2EndMinutes && e1EndMinutes > e2StartMinutes) {
                     return true; // Conflict detected
@@ -340,12 +345,14 @@ function checkConflict(e1, date) {
 function addEventToPlannerData(eventToAdd, date) {
     for (let index = 0; index < planner_data.length; index++) {
         if (planner_data[index].date == date) {
+            console.log(date, eventToAdd.start)
             if (!checkConflict(eventToAdd, date)) {
                 planner_data[index].events.push(eventToAdd);
+                return true;
             }
             else {
                 alert("You already have an event scheduled at this time!");
-                break;
+                return false;
             }
         }
     }

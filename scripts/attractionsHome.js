@@ -60,18 +60,35 @@ function joinQueue (start, end) {
 
 }
 
+function timeToMinutes(time) {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;
+}
+
 function checkConflict(e1, date) {
     for (let index = 0; index < planner_data.length; index++) {
         let events = planner_data[index].events;
-        if (planner_data[index].date == date) {
+        if (planner_data[index].date === date) {
             for (let i = 0; i < events.length; i++) {
-                if (events[i].start == e1.start || events[i].end == e1.end) {
+                let e2 = events[i];
+
+                // Convert times to minutes for easier comparison
+                let e1StartMinutes = timeToMinutes(e1.start);
+                let e1EndMinutes = timeToMinutes(e1.end);
+                let e2StartMinutes = timeToMinutes(e2.start);
+                let e2EndMinutes = timeToMinutes(e2.end);
+                
+                if (e1.start === e2.start || e1.end === e2.end) {
                     return true;
+                }
+                // Check for overlap
+                if (e1StartMinutes < e2EndMinutes && e1EndMinutes > e2StartMinutes) {
+                    return true; // Conflict detected
                 }
             }
         }
     }
-    return false;
+    return false; // No conflict
 }
 
 function increment() {
