@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.removeItem('justLoggedOut')
     if (uSavedData && uSavedData.length !== 0){
         planner_data = uSavedData
+        localStorage.removeItem('userPlannerData')
     } else{
         const savedData = localStorage.getItem('plannerData');
         if (savedData) {
@@ -504,7 +505,7 @@ function eventClicked(e, clickEvent) {
     slotButton.textContent = 'View Slot';
     slotButton.className = 'event-popup-btn';
     slotButton.onclick = function() {
-        const foo = {"The Zipper":"zipper","Nashville North": "nashville-north","Trick Riding": "trick-riding","Show Home":"show-home"};
+        const foo = {"The Zipper":"zipper","Nashville North": "nashville-north","Trick Riding": "trick-riding","Show Home Tour":"show-home"};
         const queue = "slot.html";
         let timeslot = "?timeslot=" + e.start.replace(/\s?[ap]m/i, "");
         timeslot += "&attraction=" + foo[e.title];
