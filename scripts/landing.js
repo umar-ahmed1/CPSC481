@@ -51,6 +51,8 @@ logoutButton.onclick = function () {
     localStorage.setItem('users', JSON.stringify(users));
     //also reset the planner data
     localStorage.setItem('userPlannerData',JSON.stringify([]))
+    //set the jsujt loggedout
+    localStorage.setItem('justLoggedOut',JSON.stringify(true))
     //remove the logged in user and put the page to the landing page
     localStorage.removeItem('loggedInUser');
     window.location.href = "";

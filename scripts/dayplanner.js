@@ -60,6 +60,22 @@ const planner_data_1 = [
 document.addEventListener('DOMContentLoaded', () => {
     const userSavedData = localStorage.getItem('userPlannerData')
     const uSavedData = JSON.parse(userSavedData)
+    //if a user has just logged out
+    const userLoggedOutRecently = JSON.parse(localStorage.getItem('justLoggedOut'))
+    console.log(userLoggedOutRecently)
+    if (userLoggedOutRecently){
+        planner_data.forEach(day => {
+            day.events = [];
+        });
+        planner_data_1.forEach(day => {
+            day.events.forEach(e => {
+                e.added = "false";
+            })
+        });
+        getEvents()
+        update_planner()
+    }
+    localStorage.removeItem('justLoggedOut')
     if (uSavedData && uSavedData.length !== 0){
         planner_data = uSavedData
     } else{
