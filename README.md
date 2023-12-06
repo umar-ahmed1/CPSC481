@@ -34,6 +34,7 @@ Welcome to MyStampede, where you can navigate the Stampede with ease and comfort
 - Fill in all the required fields and click the login button. You can click the cancel button to back out
 - If all fields are valid you will be logged in and taken back to the home page, a "sign out" button will appear instead. Click this to logout if needed.
 - If all fields are not valid, an error alert will be displayed on your screen telling you which field is incorrect/not filled.
+
 **Forgot Password/Reset Email**
 - If you have forgotton your password or your email, go to the login page and click the forgot password or reset email button.
 - For forgot password, you will be prompted to enter your email and a new password. If everything is correct, a confirmation email will be sent to you. **Note: since we have no backend we can't actually send confirmation emails to users, therefore the functionality is a stub**
